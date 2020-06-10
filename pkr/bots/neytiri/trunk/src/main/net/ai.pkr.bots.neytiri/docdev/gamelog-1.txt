@@ -1,0 +1,28 @@
+10;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{7s 2d} 1d{8c 9d} 0f.
+11;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{7s 2d} 1d{8c 9d} 0c   1c         s{Td 9s 3h} 1r1 0f.
+12;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{7s 2d} 1d{8c 9d} 0c   1r1 0c    s{2s 2h 3h} 1r1 0c.
+13;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{7s 2d} 1d{8c 9d} 0c   1r1 0c    s{2s 2h 3h} 1c   0r1 1c.
+14;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{7s 2d} 1d{8c 9d} 0c   1r1 0f.
+15;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{7s 2d} 1d{8c 9d} 0f.
+16;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{7s 2d} 1d{8c 9d} 0c   1c         s{Td 9s 3h} 1r1 0f.
+17;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{7s 2d} 1d{8c 9d} 0c   1r1 0c    s{2s 2h 3h} 1r1 0c.
+18;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{7s 2d} 1d{8c 9d} 0c   1r1 0c    s{2s 2h 3h} 1c   0r1 1c.
+19;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{7s 2d} 1d{8c 9d} 0c   1r1 0f.
+20;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{7s 2d} 1d{8c 9d} 0f.
+21;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{7s 2d} 1d{8c 9d} 0c   1c         s{Td 9s 3h} 1r1 0f.
+22;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{7s 2d} 1d{8c 9d} 0c   1r1 0c    s{2s 2h 3h} 1r1 0c.
+23;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{7s 2d} 1d{8c 9d} 0c   1r1 0c    s{2s 2h 3h} 1c   0r1 1c.
+24;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{7s 2d} 1d{8c 9d} 0c   1r1 0f.
+25;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{7s 2d} 1d{8c 9d} 0f.
+26;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{7s 2d} 1d{8c 9d} 0c   1c         s{Td 9s 3h} 1r1 0f.
+27;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{7s 2d} 1d{8c 9d} 0c   1r1 0c    s{2s 2h 3h} 1r1 0c.
+28;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{7s 2d} 1d{8c 9d} 0c   1r1 0c    s{2s 2h 3h} 1c   0r1 1c.
+29;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{7s 2d} 1d{8c 9d} 0c   1r1 0f.    
+30;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{As Ad} 1d{8c 9d} 0r1 1c         s{Qd 5d 4h} 1r1 0c.
+31;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{As Ad} 1d{8c 9d} 0r1 1c         s{Qd 5d 4h} 1c   0r1 1c.
+32;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{As Ad} 1d{8c 9d} 0r1 1c         s{Qd 5d 4h} 1r1 0c.
+33;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{As Ad} 1d{8c 9d} 0r1 1c         s{Qd 5d 4h} 1r1 0c.
+34;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{As Ac} 1d{8c 9d} 0c   1c         s{Kd 5d 3h} 1r1 0c.
+35;FellOmen2{-20 5 0} Probe{20 10 80}; 0d{As Ac} 1d{8c 9d} 0c   1r1 1c    s{Kd 5d 3h} 1r1 0c.
+36;Probe{20 10 80} FellOmen2{-20 5 0}; 0d{8h 9s} 1d{Ah As} 0c   1r1 0c    s{3c Kh 5d} 1r1 0c.
+37;Probe{20 10 80} FellOmen2{-20 5 0}; 0d{8h 9s} 1d{Ah As} 0c   1r1 0c    s{3c Kh 5d} 1r1 0c.

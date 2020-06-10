@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- A template to dynamically create properties for Patience tests -->
+<Props XmlMergeWithGlobal = "true">
+  <p n="DeckDescriptor" v="${bds.DataDir}ai.pkr.metastrategy/leduc-he.deck.xml"/>
+  <p n="ChanceAbstraction-0" v="will be set in test"/>
+  <p n="ChanceAbstraction-1" v="will be set in test"/>
+  <p n="Strategy-0" v="will be set in test"/>
+  <p n="Strategy-1" v="will be set in test"/>
+</Props>

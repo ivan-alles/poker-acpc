@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SessionSuiteCfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="ai.pkr.metabots.SessionSuiteCfg.xsd">
+    <Name>SessionSuiteRunner_Test_2Players</Name>
+    <LocalPlayers>
+        <LocalPlayerCfg>
+            <Name>Player0</Name>
+            <Assembly>ai.pkr.metabots.nunit.dll</Assembly>
+            <Type>ai.pkr.metabots.nunit.SessionSuiteRunner_Test_2Players+Player</Type>
+        </LocalPlayerCfg>
+        <LocalPlayerCfg>
+            <Name>Player1</Name>
+            <Assembly>ai.pkr.metabots.nunit.dll</Assembly>
+            <Type>ai.pkr.metabots.nunit.SessionSuiteRunner_Test_2Players+Player</Type>
+        </LocalPlayerCfg>
+        <!-- Add an extra player on purpoise, to make sure it does not influence the
+              game play between Player0 and Player1.
+        -->
+        <LocalPlayerCfg>
+            <Name>GuestPlayer</Name>
+            <Assembly>ai.pkr.metabots.nunit.dll</Assembly>
+            <Type>ai.pkr.metabots.nunit.SessionSuiteRunner_Test_2Players+Player</Type>
+        </LocalPlayerCfg>
+    </LocalPlayers>
+    <Sessions>
+        <SessionCfg>
+            <Name>Session1</Name>
+            <GameDefinitionFile>${loc.xml.Dir}SessionSuiteRunner_Test_2Players.GameDef.xml</GameDefinitionFile>
+            <Kind>RingGame</Kind>
+            <GamesCount>1</GamesCount>
+            <Players>
+                <PlayerSessionCfg>
+                    <Name>Player0</Name>
+                </PlayerSessionCfg>
+                <PlayerSessionCfg>
+                    <Name>Player1</Name>
+                </PlayerSessionCfg>
+            </Players>
+        </SessionCfg>
+    </Sessions>
+</SessionSuiteCfg>

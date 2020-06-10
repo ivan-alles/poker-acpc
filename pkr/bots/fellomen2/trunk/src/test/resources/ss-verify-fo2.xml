@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SessionSuiteCfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="ai.pkr.metabots.SessionSuiteCfg.xsd">
+    <!-- A verification session between two instances of FO2 -->
+    <Name>fo2-ver</Name>
+    <Sessions>
+        <SessionCfg>
+            <Name>Ring Game 1</Name>
+            <GameDefinitionFile>${bds.DataDir}ai.pkr.holdem.gamedef.2/holdem-gd-fl-2.xml</GameDefinitionFile>
+            <Kind>RingGame</Kind>
+            <GamesCount>999999</GamesCount>
+            <ReplayFrom>${env.BOTTEST_ROOT}\pa.fo2.he.fe.2.log</ReplayFrom>
+            <Players>
+                <PlayerSessionCfg>
+                    <Name>Fo21</Name>
+	            <SessionParameters>
+                       <p n="RngSeed" v="1"/>
+                    </SessionParameters>
+                </PlayerSessionCfg>
+                <PlayerSessionCfg>
+                    <Name>Fo22</Name>
+	            <SessionParameters>
+                       <p n="RngSeed" v="2"/>
+                    </SessionParameters>
+                </PlayerSessionCfg>
+        </Players>
+        </SessionCfg>
+    </Sessions>
+</SessionSuiteCfg>

@@ -1,0 +1,19 @@
+# All plug-ins must run through the following class:
+PLAYER_CLASS=PlugInOpponent
+
+# put your bot's full class name here:
+BOT_PLAYER_CLASS=ai.pkr.meerkat.MeerkatVerifierBot
+
+# put the path to your jar file here (relative to application root)
+PLAYER_JAR_FILE=data/bots/ai.pkr.meerkat-1.0.jar
+
+# Your Bot's name:
+PLAYER_NAME=Mvb
+
+# Your bot engine name:
+AI_NAME=MeerkatVerifierBot
+
+# Options for your Bot:
+DEBUG=true
+RNG_SEED=1
+LOG_FILE=c:\temp\Mvb.log

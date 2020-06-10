@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{70FFAD4F-4ACA-42BB-947F-1AF61B7BF96D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ai.pkr.metastrategy.nunit</RootNamespace>
+    <AssemblyName>ai.pkr.metastrategy.nunit</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\target\dist\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>1607</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\target\dist\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>1607</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ai.lib.algorithms, Version=2.0.2174.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\target\dist\bin\ai.lib.algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="ai.lib.utils, Version=2.0.2133.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\target\dist\bin\ai.lib.utils.dll</HintPath>
+    </Reference>
+    <Reference Include="ai.pkr.metagame, Version=2.0.2280.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\target\dist\bin\ai.pkr.metagame.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Iridium, Version=2008.8.16.470, Culture=neutral, PublicKeyToken=c061a3ec32cc0c6f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\target\dist\bin\MathNet.Iridium.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.7.10213, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\target\dist\bin\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\target\generated\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="AcitvePlayers_Test.cs" />
+    <Compile Include="algorithms\AnalyzeChanceTree_Test.cs" />
+    <Compile Include="algorithms\AnalyzeStrategyTree_Test.cs" />
+    <Compile Include="algorithms\Br_Test.cs" />
+    <Compile Include="algorithms\CompareChanceTrees_Test.cs" />
+    <Compile Include="algorithms\CompareStrategyTrees_Test.cs" />
+    <Compile Include="algorithms\ConvertCondToAbs_Test.cs" />
+    <Compile Include="algorithms\CreateChanceTreeByAbstraction_Test.cs" />
+    <Compile Include="algorithms\DumpChanceTree_Test.cs" />
+    <Compile Include="algorithms\EqLp_Test.cs" />
+    <Compile Include="algorithms\GameValue_Test.cs" />
+    <Compile Include="algorithms\McDealer_Test.cs" />
+    <Compile Include="algorithms\MergeStrategies_Test.cs" />
+    <Compile Include="algorithms\TrivialChanceAbstraction_Test.cs" />
+    <Compile Include="algorithms\VerifyAbsStrategy_Test.cs" />
+    <Compile Include="algorithms\VerifyEq_Test.cs" />
+    <Compile Include="algorithms\XmlToActionTree_Test.cs" />
+    <Compile Include="ChanceTreeNode_Test.cs" />
+    <Compile Include="OpenCfrStrategyConverter.cs" />
+    <Compile Include="algorithms\VerifyCondStrategy_Test.cs" />
+    <Compile Include="algorithms\CreateActionTreeByGameDef_Test.cs" />
+    <Compile Include="algorithms\CreateChanceTreeByGameDef_Test.cs" />
+    <Compile Include="algorithms\CreateStrategyTreeByChanceAndActionTrees_Test.cs" />
+    <Compile Include="algorithms\ExtractPlayerChanceTree_Test.cs" />
+    <Compile Include="algorithms\WalkChanceAndActionTrees_Test.cs" />
+    <Compile Include="algorithms\XmlToStrategyTree_Test.cs" />
+    <Compile Include="model-games\KuhnChanceAbstracton_Test.cs" />
+    <Compile Include="model-games\LeducHeChanceAbstracton_Test.cs" />
+    <Compile Include="StrategicString_Test.cs" />
+    <Compile Include="algorithms\DumpStrategyTree_Test.cs" />
+    <Compile Include="StrategyTree_Test.cs" />
+    <Compile Include="algorithms\CardEnum_Test.cs" />
+    <Compile Include="algorithms\NormRank_Test.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="algorithms\NormSuit_Test.cs" />
+    <Compile Include="TreeHelper.cs" />
+    <Compile Include="StrategyTreeNode_Test.cs" />
+    <Compile Include="vis\VisActionTree_Test.cs" />
+    <Compile Include="vis\VisChanceTree_Test.cs" />
+    <Compile Include="vis\VisStrategyTree_Test.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\main\net\ai.pkr.metastrategy\ai.pkr.metastrategy.csproj">
+      <Project>{297F397B-167E-4ECE-824D-9D5518ED79FA}</Project>
+      <Name>ai.pkr.metastrategy</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="test\eq-KunhPoker-0-s.xml" />
+    <Content Include="test\eq-KunhPoker-1-s.xml" />
+    <Content Include="test\eq-KunhPoker2-0-s.xml" />
+    <Content Include="test\eq-KunhPoker2-1-s.xml" />
+    <Content Include="test\eq-LeducHe-0-s.xml" />
+    <Content Include="test\eq-LeducHe-1-s.xml" />
+    <Content Include="test\eq-LeducHeRb-0-s.xml" />
+    <Content Include="test\eq-LeducHeRb-1-s.xml" />
+    <Content Include="test\eq-MicroFl-0-s.xml" />
+    <Content Include="test\eq-MicroFl-1-s.xml" />
+    <Content Include="test\eq-MiniFl-0-s.xml" />
+    <Content Include="test\eq-MiniFl-1-s.xml" />
+    <Content Include="test\eq-OneCardPoker-0-s.xml" />
+    <Content Include="test\eq-OneCardPoker-1-s.xml" />
+    <Content Include="test\eq-OneCardPoker2-0-s.xml" />
+    <Content Include="test\eq-OneCardPoker2-1-s.xml" />
+    <Content Include="test\KunhPoker-at.xml" />
+    <Content Include="test\ocfr-FractionalResult-br0.txt" />
+    <Content Include="test\ocfr-FractionalResult-br1.txt" />
+    <Content Include="test\ocfr-FractionalResult-eq0.txt" />
+    <Content Include="test\ocfr-FractionalResult-eq1.txt" />
+    <Content Include="test\ocfr-FullGame-br0.txt" />
+    <Content Include="test\ocfr-FullGame-br1.txt" />
+    <Content Include="test\ocfr-FullGame-eq0.txt" />
+    <Content Include="test\ocfr-FullGame-eq1.txt" />
+    <Content Include="test\ocfr-FullGame-FractionalResult-br0.txt" />
+    <Content Include="test\ocfr-FullGame-FractionalResult-br1.txt" />
+    <Content Include="test\ocfr-FullGame-FractionalResult-eq0.txt" />
+    <Content Include="test\ocfr-FullGame-FractionalResult-eq1.txt" />
+    <Content Include="test\ocfr-JQ_K_pair_nopair-br0.txt" />
+    <Content Include="test\ocfr-JQ_K_pair_nopair-br1.txt" />
+    <Content Include="test\ocfr-JQ_K_pair_nopair-eq0.txt" />
+    <Content Include="test\ocfr-JQ_K_pair_nopair-eq1.txt" />
+    <Content Include="test\ocfr-JQ_K_pair_nopair-FractionalResult-br0.txt" />
+    <Content Include="test\ocfr-JQ_K_pair_nopair-FractionalResult-br1.txt" />
+    <Content Include="test\ocfr-JQ_K_pair_nopair-FractionalResult-eq0.txt" />
+    <Content Include="test\ocfr-JQ_K_pair_nopair-FractionalResult-eq1.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /E /I /S /Y $(ProjectDir)test $(SolutionDir)\target\dist\test\$(TargetName) &gt;nul</PostBuildEvent>
+  </PropertyGroup>
+</Project>

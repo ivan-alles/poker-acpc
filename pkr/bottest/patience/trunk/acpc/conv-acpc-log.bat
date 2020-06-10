@@ -1,0 +1,1 @@
+call run ai.pkr.acpc.logconv <tm-p1-p2.log >ss-acpc-verify.log 

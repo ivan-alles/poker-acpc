@@ -1,0 +1,73 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ai.bds</groupId>
+    <artifactId>pom-net-installer</artifactId>
+    <version>1.2.0-SNAPSHOT</version> <!-- This must be the same as in src/pom.xml -->
+    <properties>
+        <file>src/pom.xml</file>
+        <packaging>pom</packaging>
+
+        <groupId>${project.groupId}</groupId>
+        <artifactId>pom-net</artifactId>
+        <version>${project.version}</version>
+        <generatePom>false</generatePom>
+    </properties>
+    <!-- End of file settings -->
+
+    <name>pom-net-installer</name>
+    <packaging>pom</packaging>
+    <!--<url></url>-->
+
+    <profiles />
+    <build>
+       <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>install-file</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>deploy-file</id>
+                        <phase>deploy</phase>
+                        <configuration>
+                            <repositoryId>bdsDeployRepo</repositoryId>
+                            <url>${ai.bdsDeployRepo.url}</url>
+                        </configuration>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ftp</artifactId>
+                <version>1.0-beta-6</version>
+            </extension>
+        </extensions>
+    </build>
+    <scm>
+        <connection>scm:svn:http://ai.dyndns.biz/svn/aidev/ai/bds/pom-net/tags/pom-net-installer-1.0.0</connection>
+    </scm>    
+    <distributionManagement>
+        <repository>
+            <id>bdsDeployRepo</id>
+            <url>${ai.bdsDeployRepo.url}</url>
+        </repository>
+    </distributionManagement>
+</project>

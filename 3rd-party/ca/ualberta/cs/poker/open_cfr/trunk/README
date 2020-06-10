@@ -1,0 +1,15 @@
+This is Kevin Waugh's Open Source CFR for the LEDUC card game.
+There are 3 programs included in the implementation:
+
+train - Trains a strategy based on an abstraction.  Some sample abstractions
+are included in the abstractions directory. The player can be trained with the
+same abstraction in both seats or with 2 different abtractions.
+
+play - play 2 strategies against one another.
+
+best_response - create a best response to a particular strategy.  The output is
+the best response strategy which can also be inside of a specified abstraction.
+
+Information on CFR, LEDUC, ABSTRACTION and BEST RESPONSE can all be found at
+the U of A's poker group page http://www.cs.ualberta.ca/~games/poker in the 
+publications section.

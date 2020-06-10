@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Install Patience to test guiagent.
+    -->
+    <groupId>ai.pkr.guiagent</groupId>
+    <artifactId>guiagent-test</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name></name>
+
+    <!-- This is used to get and unpack dependencies -->
+    <parent>
+        <groupId>ai.bds</groupId>
+        <artifactId>pom-net</artifactId>
+        <version>1.1.0-SNAPSHOT</version>
+    </parent>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>ai.pkr.holdem.strategy</groupId>
+            <artifactId>ca</artifactId>
+            <version>[1.*,2.0.0)</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>ai.pkr.bots</groupId>
+            <artifactId>patience</artifactId>
+            <version>[2.*,3.0.0)</version>
+            <type>zip</type>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>bds-verconfig</id>
+                        <phase>validate</phase>
+                        <configuration>
+                            <executable>python</executable>
+                            <arguments>
+                                <argument>${project.build.directory}/dist/bin/bds-verconfig.py</argument>
+                                <argument>${project.build.directory}/dist</argument>
+                                <argument>${project.build.directory}/dist/${ai.build.config}</argument>
+                            </arguments>
+                            <environmentVariables>
+                                <PATH>${project.build.directory}\dist\bin;${env.PATH}</PATH>
+                            </environmentVariables>
+                        </configuration>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

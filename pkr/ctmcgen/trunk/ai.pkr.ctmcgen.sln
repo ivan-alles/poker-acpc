@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bds", "bds", "{D2769115-6BD9-4B23-A025-0672DB6B182E}"
+	ProjectSection(SolutionItems) = preProject
+		src\main\assembly\assembly.xml = src\main\assembly\assembly.xml
+		src\test\resources\host-test.xml = src\test\resources\host-test.xml
+		pom.xml = pom.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.ctmcgen", "src\main\net\ai.pkr.ctmcgen\ai.pkr.ctmcgen.csproj", "{958AA35D-7324-4B5A-9DE0-9764A9F1D59E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.ctmcgen.nunit", "src\test\net\ai.pkr.ctmcgen.nunit\ai.pkr.ctmcgen.nunit.csproj", "{F8530C3A-E4DC-4E63-A013-D68DF04036D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.ctmcgen.gen", "src\main\net\ai.pkr.ctmcgen.gen\ai.pkr.ctmcgen.gen.csproj", "{0652BF09-2A45-41A4-A1E3-35DC186258EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.ctmcgen.conv", "src\main\net\ai.pkr.ctmcgen.conv\ai.pkr.ctmcgen.conv.csproj", "{4060032C-6F62-4BFA-995E-34F25DE95370}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.ctmcgen.merge", "src\main\net\ai.pkr.ctmcgen.merge\ai.pkr.ctmcgen.merge.csproj", "{3ED10EDF-2263-4371-9B94-5C8B5D2BAC9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{958AA35D-7324-4B5A-9DE0-9764A9F1D59E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{958AA35D-7324-4B5A-9DE0-9764A9F1D59E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{958AA35D-7324-4B5A-9DE0-9764A9F1D59E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{958AA35D-7324-4B5A-9DE0-9764A9F1D59E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8530C3A-E4DC-4E63-A013-D68DF04036D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8530C3A-E4DC-4E63-A013-D68DF04036D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8530C3A-E4DC-4E63-A013-D68DF04036D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8530C3A-E4DC-4E63-A013-D68DF04036D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0652BF09-2A45-41A4-A1E3-35DC186258EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0652BF09-2A45-41A4-A1E3-35DC186258EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0652BF09-2A45-41A4-A1E3-35DC186258EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0652BF09-2A45-41A4-A1E3-35DC186258EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4060032C-6F62-4BFA-995E-34F25DE95370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4060032C-6F62-4BFA-995E-34F25DE95370}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4060032C-6F62-4BFA-995E-34F25DE95370}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4060032C-6F62-4BFA-995E-34F25DE95370}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ED10EDF-2263-4371-9B94-5C8B5D2BAC9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ED10EDF-2263-4371-9B94-5C8B5D2BAC9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ED10EDF-2263-4371-9B94-5C8B5D2BAC9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ED10EDF-2263-4371-9B94-5C8B5D2BAC9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

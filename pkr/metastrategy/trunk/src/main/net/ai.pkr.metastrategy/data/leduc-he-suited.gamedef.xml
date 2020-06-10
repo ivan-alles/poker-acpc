@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                xmlns="ai.pkr.metagame.GameDefinition.xsd"
+                >
+<!--
+This is strategically the same game as LeducHe. The difference is: it uses a suited
+deck, this allows to test suite-normalizing algorithms.
+
+Game dimension: ?.
+-->    
+    <Name>LeducHeSuited</Name>
+    <LimitKind>FixedLimit</LimitKind>
+    <MinPlayers>2</MinPlayers>
+    <MaxPlayers>2</MaxPlayers>
+    <BlindStructure>
+        <i>0.5</i>
+        <i>0.5</i>
+    </BlindStructure>
+    <BetStructure>
+        <i>1</i>
+        <i>2</i>
+    </BetStructure>
+    <RoundsCount>2</RoundsCount>
+    <FirstActor>
+        <i>0</i>
+        <i>0</i>
+    </FirstActor>
+    <FirstActorHeadsUp>
+        <i>0</i>
+        <i>0</i>
+    </FirstActorHeadsUp>
+    <BetsCountLimits>
+        <i>3</i>
+        <i>2</i>
+    </BetsCountLimits>
+    <PrivateCardsCount>
+        <i>1</i>
+        <i>0</i>
+    </PrivateCardsCount>
+    <PublicCardsCount>
+        <i>0</i>
+        <i>0</i>
+    </PublicCardsCount>
+    <SharedCardsCount>
+        <i>0</i>
+        <i>1</i>
+    </SharedCardsCount>
+    <DeckDescrFile>${loc.xml.Dir}ai.pkr.metastrategy.leduc-he-suited.deck.xml</DeckDescrFile>
+    <GameRulesAssemblyFile></GameRulesAssemblyFile>
+    <GameRulesType>ai.pkr.metastrategy.model_games.LeducHeRules,ai.pkr.metastrategy</GameRulesType>
+    <GameRulesCreationParams></GameRulesCreationParams>
+</GameDefinition>

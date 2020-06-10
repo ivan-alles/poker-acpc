@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Profile>
+  <Properties XmlMergeWithGlobal = "true">
+    <p n="pvar1" v="pvalue1"/>
+    <p n="pvar2" v="pvalue2"/>
+  </Properties>
+</Profile>

@@ -1,0 +1,2 @@
+There is a separate package for win32 and win64 versions. The binaries are different there and the headers are the same. If both packages are installed, 
+the headers will be ovewritten by their copies. This is not nice, but works perfectly as long as lpsolve distributes identical headers in these packages.

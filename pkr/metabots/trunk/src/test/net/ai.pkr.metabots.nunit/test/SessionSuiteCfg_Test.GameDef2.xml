@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Game definition for Unit tests. -->
+<GameDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                xmlns="ai.pkr.metagame.GameDefinition.xsd"
+                >
+    <Name>GameDef2</Name>
+    <LimitKind>FixedLimit</LimitKind>
+    <MinPlayers>2</MinPlayers>
+    <MaxPlayers>2</MaxPlayers>
+    <BlindStructure>
+        <i>0.5</i>
+        <i>1</i>
+    </BlindStructure>
+    <BetStructure>
+        <i>1</i>
+    </BetStructure>
+    <RoundsCount>1</RoundsCount>
+    <FirstActor>
+        <i>2</i>
+    </FirstActor>
+    <FirstActorHeadsUp>
+        <i>0</i>
+    </FirstActorHeadsUp>
+    <BetsCountLimits>
+        <i>4</i>
+    </BetsCountLimits>
+    <PrivateCardsCount>
+        <i>2</i>
+    </PrivateCardsCount>
+    <PublicCardsCount>
+        <i>0</i>
+    </PublicCardsCount>
+    <SharedCardsCount>
+        <i>0</i>
+    </SharedCardsCount>
+    <DeckDescrFile>${loc.xml.Dir}deckdescr.xml</DeckDescrFile>
+    <GameRulesAssemblyFile></GameRulesAssemblyFile>
+    <GameRulesType>ai.pkr.metabots.nunit.GameRulesHelper,ai.pkr.metabots.nunit</GameRulesType>
+    <GameRulesCreationParams>
+        <p n="p1" v="CreationParams1"/>
+    </GameRulesCreationParams>
+</GameDefinition>

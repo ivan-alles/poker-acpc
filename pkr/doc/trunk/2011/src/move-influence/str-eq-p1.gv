@@ -1,0 +1,67 @@
+digraph G {
+graph [labeljust="l" labelloc="t" fontsize="10" nodesep="0.05" fontname="arial" ];
+node[fontsize="10" ];
+edge[arrowhead="none" fontsize="10" ];
+"n4"[label="id:4\nsp:0.667        " fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n3" -> "n4"[label="1c" ];
+"n6"[label="id:6" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n5" -> "n6"[label="0f" ];
+"n7"[label="id:7" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n5" -> "n7"[label="0c" ];
+"n5"[label="id:5\nsp:0.333        " fillcolor="#FFD0D0" style="filled" shape="box" ];
+"n3" -> "n5"[label="1r1" ];
+"n3"[label="id:3" fillcolor="#D0FFD0" style="filled" shape="box" ];
+"n2" -> "n3"[label="0c" ];
+"n9"[label="id:9\nsp:1        " fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n8" -> "n9"[label="1f" ];
+"n10"[label="id:10\nsp:0        " fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n8" -> "n10"[label="1c" ];
+"n8"[label="id:8" fillcolor="#D0FFD0" style="filled" shape="box" ];
+"n2" -> "n8"[label="0r1" ];
+"n2"[label="id:2" fillcolor="#FFD0D0" style="filled" shape="box" ];
+"n1" -> "n2"[label="1d{J}" ];
+"n13"[label="id:13\nsp:1        " fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n12" -> "n13"[label="1c" ];
+"n15"[label="id:15" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n14" -> "n15"[label="0f" ];
+"n16"[label="id:16" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n14" -> "n16"[label="0c" ];
+"n14"[label="id:14\nsp:0        " fillcolor="#FFD0D0" style="filled" shape="box" ];
+"n12" -> "n14"[label="1r1" ];
+"n12"[label="id:12" fillcolor="#D0FFD0" style="filled" shape="box" ];
+"n11" -> "n12"[label="0c" ];
+"n18"[label="id:18\nsp:0.667        " fillcolor="#FFFFFF" style="filled" shape="box" penwidth="3" ];
+"n17" -> "n18"[label="1f" ];
+"n19"[label="id:19\nsp:0.333        " fillcolor="#FFFFFF" style="filled" shape="box" penwidth="3" ];
+"n17" -> "n19"[label="1c" ];
+"n17"[label="id:17" fillcolor="#D0FFD0" style="filled" shape="box" ];
+"n11" -> "n17"[label="0r1" ];
+"n11"[label="id:11" fillcolor="#FFD0D0" style="filled" shape="box" ];
+"n1" -> "n11"[label="1d{Q}" ];
+"n22"[label="id:22\nsp:0        " fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n21" -> "n22"[label="1c" ];
+"n24"[label="id:24" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n23" -> "n24"[label="0f" ];
+"n25"[label="id:25" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n23" -> "n25"[label="0c" ];
+"n23"[label="id:23\nsp:1        " fillcolor="#FFD0D0" style="filled" shape="box" ];
+"n21" -> "n23"[label="1r1" ];
+"n21"[label="id:21" fillcolor="#D0FFD0" style="filled" shape="box" ];
+"n20" -> "n21"[label="0c" ];
+"n27"[label="id:27\nsp:0        " fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n26" -> "n27"[label="1f" ];
+"n28"[label="id:28\nsp:1        " fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n26" -> "n28"[label="1c" ];
+"n26"[label="id:26" fillcolor="#D0FFD0" style="filled" shape="box" ];
+"n20" -> "n26"[label="0r1" ];
+"n20"[label="id:20" fillcolor="#FFD0D0" style="filled" shape="box" ];
+"n1" -> "n20"[label="1d{K}" ];
+"n1"[label="id:1" fillcolor="#D0FFD0" style="filled, dotted" shape="ellipse" ];
+"n0" -> "n1"[label="0d{}" ];
+{rank=same; round0;
+"n0"[label="id:0" fillcolor="#FFD0D0" style="filled, dotted" shape="ellipse" ];
+}
+{
+"round0"[fontsize="22" style="bold" peripheries="0" label="Round 0" ];
+}
+}

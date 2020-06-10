@@ -1,0 +1,65 @@
+digraph G {
+graph [labeljust="l" labelloc="t" fontsize="10" nodesep="0.05" fontname="arial" ];
+node[fontsize="9" ];
+edge[arrowhead="none" fontsize="10" ];
+"n4"[label="id:4\nv:0.167" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n3" -> "n4"[label="1c" ];
+"n6"[label="id:6\nv:0.167" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n5" -> "n6"[label="0f" penwidth="2" ];
+"n7"[label="id:7\nv:0.333" fillcolor="#DEDEDE" style="filled" shape="box" ];
+"n5" -> "n7"[label="0c" ];
+"n5"[label="id:5\nv:0.167" fillcolor="#FFD0D0" style="filled" shape="box" ];
+"n3" -> "n5"[label="1r1" ];
+"n3"[label="id:3\nv:0.333" fillcolor="#D0FFD0" style="filled" shape="box" ];
+"n2" -> "n3"[label="0c" penwidth="2" ];
+"n9"[label="id:9\nv:-0.111" fillcolor="#DEDEDE" style="filled" shape="box" ];
+"n8" -> "n9"[label="1f" ];
+"n10"[label="id:10\nv:0.444" fillcolor="#DEDEDE" style="filled" shape="box" ];
+"n8" -> "n10"[label="1c" ];
+"n8"[label="id:8\nv:0.333" fillcolor="#CBDECB" style="filled" shape="box" ];
+"n2" -> "n8"[label="0r1" ];
+"n2"[label="id:2\nv:0.333" fillcolor="#FFD0D0" style="filled" shape="box" ];
+"n0" -> "n2"[label="0d{J} 1d{}" ];
+"n14"[label="id:14\nv:-0.111" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n13" -> "n14"[label="1c" ];
+"n16"[label="id:16\nv:0.222" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n15" -> "n16"[label="0f" penwidth="2" ];
+"n17"[label="id:17\nv:0.222" fillcolor="#DEDEDE" style="filled" shape="box" ];
+"n15" -> "n17"[label="0c" ];
+"n15"[label="id:15\nv:0.222" fillcolor="#FFD0D0" style="filled" shape="box" ];
+"n13" -> "n15"[label="1r1" ];
+"n13"[label="id:13\nv:0.111" fillcolor="#D0FFD0" style="filled" shape="box" ];
+"n12" -> "n13"[label="0c" penwidth="2" ];
+"n19"[label="id:19\nv:-0.167" fillcolor="#DEDEDE" style="filled" shape="box" ];
+"n18" -> "n19"[label="1f" ];
+"n20"[label="id:20\nv:0.333" fillcolor="#DEDEDE" style="filled" shape="box" ];
+"n18" -> "n20"[label="1c" ];
+"n18"[label="id:18\nv:0.167" fillcolor="#CBDECB" style="filled" shape="box" ];
+"n12" -> "n18"[label="0r1" ];
+"n12"[label="id:12\nv:0.111" fillcolor="#FFD0D0" style="filled" shape="box" ];
+"n0" -> "n12"[label="0d{Q} 1d{}" ];
+"n24"[label="id:24\nv:-0.278" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n23" -> "n24"[label="1c" ];
+"n26"[label="id:26\nv:0.056" fillcolor="#DEDEDE" style="filled" shape="box" ];
+"n25" -> "n26"[label="0f" ];
+"n27"[label="id:27\nv:-0.111" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n25" -> "n27"[label="0c" penwidth="2" ];
+"n25"[label="id:25\nv:-0.111" fillcolor="#FFD0D0" style="filled" shape="box" ];
+"n23" -> "n25"[label="1r1" ];
+"n23"[label="id:23\nv:-0.389" fillcolor="#D0FFD0" style="filled" shape="box" ];
+"n22" -> "n23"[label="0c" penwidth="2" ];
+"n29"[label="id:29\nv:-0.278" fillcolor="#DEDEDE" style="filled" shape="box" ];
+"n28" -> "n29"[label="1f" ];
+"n30"[label="id:30\nv:-0.111" fillcolor="#DEDEDE" style="filled" shape="box" ];
+"n28" -> "n30"[label="1c" ];
+"n28"[label="id:28\nv:-0.389" fillcolor="#CBDECB" style="filled" shape="box" ];
+"n22" -> "n28"[label="0r1" ];
+"n22"[label="id:22\nv:-0.389" fillcolor="#FFD0D0" style="filled" shape="box" ];
+"n0" -> "n22"[label="0d{K} 1d{}" ];
+{rank=same; round0;
+"n0"[label="id:0\nv:0.056" fillcolor="#FFFFFF" style="filled, dotted" shape="ellipse" ];
+}
+{
+"round0"[fontsize="22" style="bold" peripheries="0" label="Round 0" ];
+}
+}

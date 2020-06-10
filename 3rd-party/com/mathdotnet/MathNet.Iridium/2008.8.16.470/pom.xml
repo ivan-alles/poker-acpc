@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Adjust settings for your file -->
+    <groupId>ai.3rd-party.com.mathdotnet</groupId>
+    <artifactId>MathNet.Iridium-redist</artifactId>
+    <version>2008.8.16.470</version>
+    <properties>
+        <file>MathNet.Iridium-redist.zip</file>
+        <packaging>zip</packaging>
+
+        <groupId>${project.groupId}</groupId>
+        <artifactId>${project.artifactId}</artifactId>
+        <version>${project.version}</version>
+    </properties>
+    <!-- End of file settings -->
+
+    <name>Redistributable package for ${project.groupId}:${project.artifactId}</name>
+    <packaging>pom</packaging>
+    <!--<url></url>-->
+
+    <profiles></profiles>
+    <build>
+       <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>install-file</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>deploy-file</id>
+                        <phase>deploy</phase>
+                        <configuration>
+                            <repositoryId>bdsDeployRepo</repositoryId>
+                            <url>${ai.bdsDeployRepo.url}</url>
+                        </configuration>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ftp</artifactId>
+                <version>1.0-beta-6</version>
+            </extension>
+        </extensions>
+    </build>
+    <distributionManagement>
+        <repository>
+            <id>bdsDeployRepo</id>
+            <url>${ai.bdsDeployRepo.url}</url>
+        </repository>
+    </distributionManagement>
+</project>

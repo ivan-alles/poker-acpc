@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                xmlns="ai.pkr.metagame.GameDefinition.xsd"
+                >
+<!--
+This is a simple heads-up fixed limit game (dimension: 85, 81) with a non-trivial strategy.
+
+It models the following properties of real poker:
+
+- Multiple rounds (2).
+- Private and shared cards.
+- Strength of a pocket can be changed significantly by the board (worse cards turns to nuts).
+- Player 0 can fold before player 1 has made a single move.
+
+The cards are A, K, Q, J, with ranks respectively from 4 to 1.
+
+There are two rounds, in each of them there is a raise limit of one. 
+
+In the round 0 one private card is dealt. In the round 1 one shared card is dealt.
+
+Hand strength is defined according to the following rules:
+
+- Ranks of a hand is the sum of ranks of the pocket and the board (e.g. pocket Q, board A: rank is 2 + 4 = 6)
+- There is one exception, let's call it straight: if the pocket is J and the board is Q, 
+  the rank of this hand is 8 (absolute maximum). 
+- The hand with the highest rank wins the showdown.
+
+-->    
+    <Name>MiniFl</Name>
+    <LimitKind>FixedLimit</LimitKind>
+    <MinPlayers>2</MinPlayers>
+    <MaxPlayers>2</MaxPlayers>
+    <BlindStructure>
+        <i>0.5</i>
+        <i>1</i>
+    </BlindStructure>
+    <BetStructure>
+        <i>1</i>
+        <i>2</i>
+    </BetStructure>
+    <RoundsCount>2</RoundsCount>
+    <FirstActor>
+        <i>0</i>
+        <i>0</i>
+    </FirstActor>
+    <FirstActorHeadsUp>
+        <i>0</i>
+        <i>0</i>
+    </FirstActorHeadsUp>
+    <BetsCountLimits>
+        <i>2</i>
+        <i>1</i>
+    </BetsCountLimits>
+    <PrivateCardsCount>
+        <i>1</i>
+        <i>0</i>
+    </PrivateCardsCount>
+    <PublicCardsCount>
+        <i>0</i>
+        <i>0</i>
+    </PublicCardsCount>
+    <SharedCardsCount>
+        <i>0</i>
+        <i>1</i>
+    </SharedCardsCount>
+    <DeckDescrFile>${bds.DataDir}/ai.pkr.metastrategy/mini-fl.deck.xml</DeckDescrFile>
+    <GameRulesAssemblyFile></GameRulesAssemblyFile>
+    <GameRulesType>ai.pkr.metastrategy.model_games.MiniFlRules,ai.pkr.metastrategy</GameRulesType>
+    <GameRulesCreationParams></GameRulesCreationParams>
+</GameDefinition>

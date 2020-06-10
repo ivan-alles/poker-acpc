@@ -1,0 +1,41 @@
+digraph G {
+graph [labeljust="l" labelloc="t" fontsize="20" nodesep="0.05" fontname="arial" ];
+node[fontsize="10" ];
+edge[arrowhead="none" fontsize="10" ];
+"n4"[label=<<BR ALIGN="LEFT"/>Id:4<BR ALIGN="LEFT"/>J:n/a     <BR ALIGN="LEFT"/>Q:+.17·h13     <BR ALIGN="LEFT"/>K:+.17·h22     <BR ALIGN="LEFT"/>> fillcolor="#FFFFFF" style="filled" shape="box" margin="0.1,0.05" ];
+"n3" -> "n4"[label="1c" ];
+"n6"[label=<<BR ALIGN="LEFT"/>Id:6<BR ALIGN="LEFT"/>J:n/a     <BR ALIGN="LEFT"/>Q:+.17·h14     <BR ALIGN="LEFT"/>K:+.17·h23     <BR ALIGN="LEFT"/>> fillcolor="#FFFFFF" style="filled" shape="box" margin="0.1,0.05" ];
+"n5" -> "n6"[label="0f" ];
+"n7"[label=<<BR ALIGN="LEFT"/>Id:7<BR ALIGN="LEFT"/>J:n/a     <BR ALIGN="LEFT"/>Q:+.33·h14     <BR ALIGN="LEFT"/>K:+.33·h23     <BR ALIGN="LEFT"/>> fillcolor="#FFFFFF" style="filled" shape="box" margin="0.1,0.05" ];
+"n5" -> "n7"[label="0c" ];
+"n5"[label=<<BR ALIGN="LEFT"/>Id:5<BR ALIGN="LEFT"/>> fillcolor="#FFD0D0" style="filled" shape="box" margin="0.1,0.05" ];
+"n3" -> "n5"[label="1r1" ];
+"n3"[label=<<BR ALIGN="LEFT"/>Id:3<BR ALIGN="LEFT"/>> fillcolor="#D0FFD0" style="filled" shape="box" margin="0.1,0.05" ];
+"n0" -> "n3"
+"n14"[label=<<BR ALIGN="LEFT"/>Id:14<BR ALIGN="LEFT"/>J:-.17·h4     <BR ALIGN="LEFT"/>Q:n/a     <BR ALIGN="LEFT"/>K:+.17·h22     <BR ALIGN="LEFT"/>> fillcolor="#FFFFFF" style="filled" shape="box" margin="0.1,0.05" ];
+"n13" -> "n14"[label="1c" ];
+"n16"[label=<<BR ALIGN="LEFT"/>Id:16<BR ALIGN="LEFT"/>J:+.17·h5     <BR ALIGN="LEFT"/>Q:n/a     <BR ALIGN="LEFT"/>K:+.17·h23     <BR ALIGN="LEFT"/>> fillcolor="#FFFFFF" style="filled" shape="box" margin="0.1,0.05" ];
+"n15" -> "n16"[label="0f" ];
+"n17"[label=<<BR ALIGN="LEFT"/>Id:17<BR ALIGN="LEFT"/>J:-.33·h5     <BR ALIGN="LEFT"/>Q:n/a     <BR ALIGN="LEFT"/>K:+.33·h23     <BR ALIGN="LEFT"/>> fillcolor="#FFFFFF" style="filled" shape="box" margin="0.1,0.05" ];
+"n15" -> "n17"[label="0c" ];
+"n15"[label=<<BR ALIGN="LEFT"/>Id:15<BR ALIGN="LEFT"/>> fillcolor="#FFD0D0" style="filled" shape="box" margin="0.1,0.05" ];
+"n13" -> "n15"[label="1r1" ];
+"n13"[label=<<BR ALIGN="LEFT"/>Id:13<BR ALIGN="LEFT"/>> fillcolor="#D0FFD0" style="filled" shape="box" margin="0.1,0.05" ];
+"n0" -> "n13"
+"n24"[label=<<BR ALIGN="LEFT"/>Id:24<BR ALIGN="LEFT"/>J:-.17·h4     <BR ALIGN="LEFT"/>Q:-.17·h13     <BR ALIGN="LEFT"/>K:n/a     <BR ALIGN="LEFT"/>> fillcolor="#FFFFFF" style="filled" shape="box" margin="0.1,0.05" ];
+"n23" -> "n24"[label="1c" ];
+"n26"[label=<<BR ALIGN="LEFT"/>Id:26<BR ALIGN="LEFT"/>J:+.17·h5     <BR ALIGN="LEFT"/>Q:+.17·h14     <BR ALIGN="LEFT"/>K:n/a     <BR ALIGN="LEFT"/>> fillcolor="#FFFFFF" style="filled" shape="box" margin="0.1,0.05" ];
+"n25" -> "n26"[label="0f" ];
+"n27"[label=<<BR ALIGN="LEFT"/>Id:27<BR ALIGN="LEFT"/>J:-.33·h5     <BR ALIGN="LEFT"/>Q:-.33·h14     <BR ALIGN="LEFT"/>K:n/a     <BR ALIGN="LEFT"/>> fillcolor="#FFFFFF" style="filled" shape="box" margin="0.1,0.05" ];
+"n25" -> "n27"[label="0c" ];
+"n25"[label=<<BR ALIGN="LEFT"/>Id:25<BR ALIGN="LEFT"/>> fillcolor="#FFD0D0" style="filled" shape="box" margin="0.1,0.05" ];
+"n23" -> "n25"[label="1r1" ];
+"n23"[label=<<BR ALIGN="LEFT"/>Id:23<BR ALIGN="LEFT"/>> fillcolor="#D0FFD0" style="filled" shape="box" margin="0.1,0.05" ];
+"n0" -> "n23"
+{rank=same; round0;
+"n0"[label=<<BR ALIGN="LEFT"/>Id:0<BR ALIGN="LEFT"/>> fillcolor="#FFFFFF" style="filled, dotted" shape="ellipse" margin="0.1,0.05" ];
+}
+{
+"round0"[fontsize="22" style="bold" peripheries="0" label="Round 0" ];
+}
+}

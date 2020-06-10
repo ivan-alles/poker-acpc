@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Props XmlMergeWithGlobal = "true">
+    <p n="pvar1" v="pvalue1"/>
+    <!-- Some comment, must be tested too. -->
+    <p n="pvar2" v="pvalue2"/>
+    <p n="MyFileName" v="${loc.xml.File}"/>
+    <p n="MyDirName" v="${loc.xml.Dir}"/>
+</Props>

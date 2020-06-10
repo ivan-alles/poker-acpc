@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SessionSuiteCfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="ai.pkr.metabots.SessionSuiteCfg.xsd">
+    <Name>cfo2-rg</Name>
+    <LocalPlayers>
+        <LocalPlayerCfg>
+            <Name>Neytiri</Name>
+            <Assembly>${env.NEYTIRI_HOME}\ai.pkr.bots.neytiri.dll</Assembly>
+            <Type>ai.pkr.bots.neytiri.Neytiri</Type>
+            <CreationParameters>
+                <p n="Strategy" v="dist\neytiri.xml"/>
+                <p n="MonteCarloCount" v="-1, 5000, 3000, 3000"/>
+            </CreationParameters>
+        </LocalPlayerCfg>
+    </LocalPlayers>
+    <Sessions>
+        <SessionCfg>
+            <Name>Ring Game</Name>
+            <RngSeed>0</RngSeed>
+            <GameDefinitionFile>${env.AI_HOME}\data\ai.pkr.holdem.gd.fl.2.1.xml</GameDefinitionFile>
+            <Kind>RingGame</Kind>
+            <GamesCount>1000000</GamesCount>
+            <RepeatCount>1</RepeatCount> 
+            <FixButton>true</FixButton>
+            <ReplayFrom>T9s.log</ReplayFrom>
+            <Players>
+                <PlayerSessionCfg>
+                    <Name>Neytiri</Name>
+                </PlayerSessionCfg>
+                <PlayerSessionCfg>
+                    <Name>Fo2</Name>
+                    <SessionParameters></SessionParameters>
+                </PlayerSessionCfg>
+            </Players>
+        </SessionCfg>
+    </Sessions>
+</SessionSuiteCfg>

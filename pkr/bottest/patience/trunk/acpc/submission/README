@@ -1,0 +1,44 @@
+#############################################################
+# Please fill out the following information about your team 
+#############################################################
+
+Team Name: Nick Grozny
+Agent Name (can be the same as team name): Patience
+
+For each team member, please list the following:
+Name: Nick Grozny 
+Team leader: y
+email: grozny.nick@yandex.com
+Academic: MSc in Mathematics
+Affiliation: no
+Loaction: Moscow, Russia.
+
+Was this submission part of an academic class project?  What level of class (undergraduate/graduate)?: No
+
+
+###########################################################################
+# Please provide as much information about your agent as possible as the
+# competition organizers are very interested in knowing more about the
+# techniques used by our competitors.
+###########################################################################
+
+1) Patience is a static agent.
+
+2) Does your agent use a (approximate) Nash equilibrium strategy? Yes.
+
+3) Does your agent attempt to model your opponents?  If so, does it do so
+online during the competition or offline from data (e.g., using logs of play or
+the benchmark server)? No.
+
+4) Does your agent use techniques that would benefit from additional CPU time
+during the competition? No.
+
+5) Does your agent use techniques that would benefit from additional RAM during
+the competition? No.
+
+
+One/Two Paragraph Summary of Technique: Patience uses a static strategy built by the fictitious play algorithm.
+
+
+References to relevant papers, if any: no.
+

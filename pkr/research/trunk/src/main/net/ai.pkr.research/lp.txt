@@ -1,0 +1,222 @@
+-------------------- Node 5 ----------------------------
+v6 = 1 * (rQ + rK)
+v7 = 2 * (rQ + rK)
+
+LP:
+
+v5 = v6 * b6 + v7 * b7
+b6 + b7 = 1
+v5 <= v6
+v5 <= v7   
+
+Replace:
+
+r6 = v6 * b6
+r7 = v7 * b7
+
+Then:
+
+v5 = r6 + r7
+b6 + b7 = 1        ??????
+r6 + r7 <= v6
+r6 + r7 <= v7
+
+-------------------- Node 4 ----------------------------
+v4 = kQ + kK
+-------------------- Node 3 ----------------------------
+v3 = v4 + v5
+-------------------- Node 9 ----------------------------
+v9 = -vQ - vK
+-------------------- Node 10 ---------------------------
+v10 = 2*cQ + 2*cK
+-------------------- Node 8 ----------------------------
+v8 = v9 + v10
+-------------------- Node 2 ----------------------------
+v2 = v3 * b3 + v8 * b8
+b3 + b8 = 1
+v2 <= v3
+v2 <= v8
+
+Replace:
+
+r3 = v3 * b3
+r8 = v8 * b8
+
+Then:
+
+v2 = r3 + r8
+b3 + b8 = 1 ???
+r3 + r8 <= v3
+r3 + r8 <= v8
+
+Need to know:
+- number of variables
+- number of constraints
+- kind of constraint (equal, less or equal)
+- constraints on p1 moves (e.g. rK + kK = 1), actually it is Sum(t_i*c_i) = 1 where t_i - global terminal probabilities.
+- v for terminal nodes of p0 tree (set of t corresponding to a terminal node of p0 tree and game result).
+
+Data stuctures:
+- Hash table of variables, key is the name, value is ordinal number + equivalent list of variables.
+- Constraints (less than and equal)
+    - Array of constraints, each element is a list of doubles
+    - Array of right hand sides (doubles)
+
+Use steps 3, 4 and 5 from BestResponseStatic.
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------
+-------------------- Node 5 ----------------------------
+v6 = 1 * (rQ + rK)
+v7 = 2 * (rQ + rK)
+
+LP:
+
+f5 = v6 * b6 + v7 * b7
+b6 + b7 = 1
+f5 <= v6
+f5 <= v7   
+
+or:
+
+f5 = rQ*b6 + rK*b6 + 2*rQ*b7 + 2*rK*b7
+rQ*b6 + rK*b6 + 2*rQ*b7 + 2*rK*b7 <= rQ + rK
+rQ*b6 + rK*b6 + 2*rQ*b7 + 2*rK*b7 <= 2*rQ + 2*rK
+b6 + b7 = 1
+
+Replace:
+rQ*b6 = p61
+rK*b6 = p62  
+rQ*b7 = p71
+rK*b7 = p72
+
+Then:
+f5 = p61 + p62 + 2*p71 + 2*p72
+p61 + p62 + 2*p71 + 2*p72 <= rQ + rK
+p61 + p62 + 2*p71 + 2*p72 <= 2*rQ + 2*rK
+p61 + p71 = rQ
+p62 + p72 = rK
+pij >= 0
+
+
+-------------------- Node 3 ----------------------------
+f3 = v3 + v5 = v3 + f5 = kQ + kK + p61 + p62 + 2*p71 + 2*p72
+ 
+-------------------- Node 8 ---------------------------- 
+f8 = v9 + v10 = -fQ - fK + 2*cQ + 2*cK
+
+-------------------- Node 2 ----------------------------
+f2 = b3*f3 + b8*f8 = b3*kQ + b3*kK + b3*p61 + b3*p62 + 2*b3*p71 + 2*b3*p72 - b8*fQ - b8*fK + 2*b8*cQ + 2*b8*cK 
+b3 + b8 = 1
+f2 <= f3
+f2 <= f8
+
+Replace:
+
+b3*kQ  = p31 
+b3*kK  = p32
+b3*p61 = p33 
+b3*p62 = p34
+b3*p71 = p35
+b3*p72 = p36
+b8*fQ  = p81
+b8*fK  = p82
+b8*cQ  = p83
+b8*cK  = p84
+
+p31 + p32 + p33 + p34 + p35 + p36 = b
+p81 + p82 + p83 + p84  = f 
+ 
+ 
+
+-------------------- Node 5 ----------------------------
+v6 = 1 * (srQ + srK) * g6 =   g6*srQ +   g6*srK
+v7 = 2 * (srQ + srK) * g7 = 2*g7*srQ + 2*g7*srK
+
+srQ*g6 = q6
+srK*g6 = k6
+srQ*g7 = q7
+srK*g7 = k7
+
+v6 = q6 + k6
+v7 = 2*q7 + 2*k7
+
+f = q6 + k6 + 2*q7 + 2*k7
+q6 + k6 + 2*q7 + 2*k7 <= q6 + q7 + k6 + k7         -> q7 + k7 <= 0
+q6 + k6 + 2*q7 + 2*k7 <= 2*q6 + 2*q7 + 2*k6 + 2*k7 -> q6 + k6 >= 0
+q6+k6+q7+k7 = "1"
+
+-------------------- Node 3 ----------------------------
+v3 = (1 - srQ + 1 - srK) * g4 + v5
+
+-------------------- Node 5 ----------------------------
+Replace s5 by p5
+
+game tree nodes: 5, 14
+f5 = p6 + p15 + 2*p7 + 2*p16
+p6 + p15 + 2*p7 + 2*p16 <= s5 + s14 
+p6 + p15 + 2*p7 + 2*p16 <= 2*s5 + 2*s14
+
+-------------------- Node 3 ----------------------------
+game tree nodes: 3, 12
+f3 = f5 + f4 = f5 + p4 = p6 + p15 + 2*p7 + 2*p16 + p4
+
+-------------------- Node 8 ----------------------------
+game tree nodes: 8, 17
+f8 = -p9 + 2*p10
+
+-------------------- Node 2 ----------------------------
+game tree nodes: 2, 11
+f2 = f3*p3 + f8*p8
+f2 < f3
+
+Neponyatno, kak pisat' ogranicheniya: chto budet, kogda opponent vybiraet odnu is akzij (pi == 1, pi+1 == 0) 
+ 
+
+
+
+
+
+
+
+
+
+-------------------- Node 5 ----------------------------
+v6 = 1 * (srQ + srK)
+v7 = 2 * (srQ + srK)
+
+LP:
+
+f = b6 * (srQ + srK) + 2*(1 - b6) * (srQ + srK)
+b6 * (srQ + srK) + 2*(1 - b6) * (srQ + srK) <= 2*(1 - b6) * (srQ + srK)
+b6 * (srQ + srK) + 2*(1 - b6) * (srQ + srK) <= b6 * (srQ + srK)
+b6 >= 0
+b6 <= 1
+
+n6 = b6 * (srQ + srK) 
+
+f = 2*(srQ + srK) - n6
+b6 = 0: 2*(srQ + srK) - n6 <= 2*(srQ + srK)
+b6 = 1: 2*(srQ + srK) - n6 <= srQ + srK
+b6 >= 0
+n6 <= 2
+
+
+f = 2*srQ - n6
+b6 = 0: n6 >= 0
+b6 = 1: n6 >= srQ
+b6 >= 0
+n6 <= 1
+
+-------------------- Node 3 ----------------------------
+v4 = 2 * (s5q + s5k)
+v3 = v4 + v5 

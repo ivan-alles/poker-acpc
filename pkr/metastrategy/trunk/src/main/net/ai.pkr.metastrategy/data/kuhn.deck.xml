@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeckDescriptor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="ai.pkr.metagame.DeckDescriptor.xsd">
+    <Name>KuhnDeck</Name>
+    <CardNames>
+        <i>J</i>
+        <i>Q</i>
+        <i>K</i>
+    </CardNames>
+    <CardSets>
+        <i>400</i>
+        <i>800</i>
+        <i>1000</i>
+    </CardSets>
+</DeckDescriptor>
+

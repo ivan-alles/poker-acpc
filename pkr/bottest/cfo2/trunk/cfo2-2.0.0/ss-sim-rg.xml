@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SessionSuiteCfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="ai.pkr.metabots.SessionSuiteCfg.xsd">
+    <Name>sim-rg</Name>
+    <LocalPlayers>
+        <LocalPlayerCfg>
+            <Name>Neytiri</Name>
+            <Assembly>${env.NEYTIRI_HOME}\ai.pkr.bots.neytiri.2.dll</Assembly>
+            <Type>ai.pkr.bots.neytiri.Neytiri</Type>
+            <CreationParameters>
+                <p n="Strategy" v="dist\neytiri.xml"/>
+                <!-- <p n="MonteCarloCount1" v="-1, 1, 45, 20, 500"/> -->
+                <p n="MonteCarloCount1" v="-1, 1, 15, 15, 200"/>
+		<p n="MonteCarloCount2" v="-1, 1, 1, 44, 500"/>
+		<p n="MonteCarloCount3" v="-1, 1, 1, 1, 990"/>
+                <p n="Debugger" v="false"/>
+            </CreationParameters>
+        </LocalPlayerCfg>
+        <LocalPlayerCfg>
+            <Name>Sim</Name>
+            <Assembly>${env.NEYTIRI_HOME}\ai.pkr.bots.neytiri.2.dll</Assembly>
+            <Type>ai.pkr.bots.neytiri.OppSimulator</Type>
+            <CreationParameters>
+                <p n="Strategy" v="build\opp-at.xml"/>
+                <p n="RngSeed" v="1"/>
+                <p n="Debugger" v="false"/>
+            </CreationParameters>
+        </LocalPlayerCfg>
+    </LocalPlayers>
+    <Sessions>
+        <SessionCfg>
+            <Name>Ring Game</Name>
+            <RngSeed>0</RngSeed>
+            <GameDefinitionFile>${env.AI_HOME}\data\ai.pkr.holdem.gd.fl.2.1.xml</GameDefinitionFile>
+            <Kind>RingGame</Kind>
+            <GamesCount>1000000</GamesCount>
+            <RepeatCount>1</RepeatCount> 
+            <FixButton>true</FixButton>
+            <ReplayFrom>T9s.log</ReplayFrom>
+            <Players>
+                <PlayerSessionCfg>
+                    <Name>Neytiri</Name>
+                </PlayerSessionCfg>
+                <PlayerSessionCfg>
+                    <Name>Sim</Name>
+                    <SessionParameters></SessionParameters>
+                </PlayerSessionCfg>
+            </Players>
+        </SessionCfg>
+    </Sessions>
+</SessionSuiteCfg>

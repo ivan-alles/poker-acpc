@@ -1,0 +1,7 @@
+﻿The evaluators are tested by comparing the evaluation results with the the corresponding 
+resulst of RefEvaluator. This requires the same format of the hand stregths (satisfied at present) and
+compatible cards formats (can be always achieved).
+
+Additionally, evaluators are tested indirectly in reference games. For example, a session of holdem
+recorded on an independes source (poker site, etc.) is played with pkrserver, and the result is compared
+with the original.

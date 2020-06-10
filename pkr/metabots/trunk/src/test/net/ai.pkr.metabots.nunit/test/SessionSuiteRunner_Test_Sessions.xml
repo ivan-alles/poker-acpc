@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SessionSuiteCfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="ai.pkr.metabots.SessionSuiteCfg.xsd">
+    <Name>Test Suite</Name>
+    <LocalPlayers>
+        <LocalPlayerCfg>
+            <Name>Player0</Name>
+            <Type>ai.pkr.metabots.nunit.SessionSuiteRunner_Test_Sessions+Player, ai.pkr.metabots.nunit</Type>
+            <CreationParameters>
+                <p n="p1" v ="Some creation configuration" />
+            </CreationParameters>
+        </LocalPlayerCfg>
+        <LocalPlayerCfg>
+            <Name>Player1</Name>
+            <Type>ai.pkr.metabots.nunit.SessionSuiteRunner_Test_Sessions+Player, ai.pkr.metabots.nunit</Type>
+        </LocalPlayerCfg>
+    </LocalPlayers>
+    <Sessions>
+        <SessionCfg>
+            <Name>Session1</Name>
+            <GameDefinitionFile>${loc.xml.Dir}SessionSuiteRunner_Test_Sessions.Gamedef1.xml</GameDefinitionFile>
+            <Kind>RingGame</Kind>
+            <RngSeed>36</RngSeed>
+            <GamesCount>2</GamesCount>
+            <Players>
+                <PlayerSessionCfg>
+                    <Name>Player0</Name>
+                    <SessionParameters>
+                        <p n="p1" v ="v1" />
+                        <p n="p2" v ="v2" />
+                    </SessionParameters>
+                </PlayerSessionCfg>
+                <PlayerSessionCfg>
+                    <Name>Player1</Name>
+                </PlayerSessionCfg>
+            </Players>
+        </SessionCfg>
+        <SessionCfg>
+            <Name>Session2</Name>
+            <Kind>RingGame</Kind>
+            <GameDefinitionFile>${loc.xml.Dir}SessionSuiteRunner_Test_Sessions.Gamedef2.xml</GameDefinitionFile>
+            <GamesCount>3</GamesCount>
+            <Players>
+                <PlayerSessionCfg>
+                    <Name>Player0</Name>
+                </PlayerSessionCfg>
+                <PlayerSessionCfg>
+                    <Name>Player1</Name>
+                </PlayerSessionCfg>
+            </Players>
+        </SessionCfg>
+    </Sessions>
+</SessionSuiteCfg>

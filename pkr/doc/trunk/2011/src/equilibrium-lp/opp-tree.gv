@@ -1,0 +1,49 @@
+digraph G {
+graph [labeljust="l" labelloc="t" fontsize="10" nodesep="0.05" fontname="arial" ];
+node[fontsize="10" ];
+edge[arrowhead="none" fontsize="10" ];
+"n4"[label=<<BR ALIGN="LEFT"/>v4=        <BR ALIGN="LEFT"/>.17·h13+.17·h23        > fillcolor="#FFFFFF" style="filled" shape="box" margin="0.15,0.1" ];
+"n3" -> "n4"[label="1c" ];
+"n6"[label=<<BR ALIGN="LEFT"/>v6=        <BR ALIGN="LEFT"/>-.17·h16-.17·h26        > fillcolor="#FFFFFF" style="filled" shape="box" margin="0.15,0.1" ];
+"n5" -> "n6"[label="0f" ];
+"n7"[label=<<BR ALIGN="LEFT"/>v7=        <BR ALIGN="LEFT"/>.33·h17+.33·h27        > fillcolor="#FFFFFF" style="filled" shape="box" margin="0.15,0.1" ];
+"n5" -> "n7"[label="0c" ];
+"n5"[label=<<BR ALIGN="LEFT"/>v5=v6+v7        > fillcolor="#FFD0D0" style="filled" shape="box" margin="0.15,0.1" ];
+"n3" -> "n5"[label="1r1" ];
+"n3"[label=<<BR ALIGN="LEFT"/>v3=r4+r5        <BR ALIGN="LEFT"/>v3≤v4        <BR ALIGN="LEFT"/>v3≤v5        > fillcolor="#D0FFD0" style="filled" shape="box" margin="0.15,0.1" ];
+"n2" -> "n3"[label="0c" ];
+"n9"[label=<<BR ALIGN="LEFT"/>v9=        <BR ALIGN="LEFT"/>.17·h18+.17·h28        > fillcolor="#FFFFFF" style="filled" shape="box" margin="0.15,0.1" ];
+"n8" -> "n9"[label="1f" ];
+"n10"[label=<<BR ALIGN="LEFT"/>v10=        <BR ALIGN="LEFT"/>.33·h18+.33·h28        > fillcolor="#FFFFFF" style="filled" shape="box" margin="0.15,0.1" ];
+"n8" -> "n10"[label="1c" ];
+"n8"[label=<<BR ALIGN="LEFT"/>v8=r9+r10        <BR ALIGN="LEFT"/>v8≤v9        <BR ALIGN="LEFT"/>v8≤v10        > fillcolor="#D0FFD0" style="filled" shape="box" margin="0.15,0.1" ];
+"n2" -> "n8"[label="0r1" ];
+"n2"[label=<<BR ALIGN="LEFT"/>v2=v3+v8        > fillcolor="#FFD0D0" style="filled" shape="box" margin="0.15,0.1" ];
+"n1" -> "n2"[label="1d{J}" ];
+"n13"[label=<<BR ALIGN="LEFT"/>v13=        <BR ALIGN="LEFT"/>-.17·h3+.17·h23        > fillcolor="#FFFFFF" style="filled" shape="box" margin="0.15,0.1" ];
+"n12" -> "n13"[label="1c" ];
+"n15"[label=<<BR ALIGN="LEFT"/>v15=        <BR ALIGN="LEFT"/>-.17·h6-.17·h26        > fillcolor="#FFFFFF" style="filled" shape="box" margin="0.15,0.1" ];
+"n14" -> "n15"[label="0f" ];
+"n16"[label=<<BR ALIGN="LEFT"/>v16=        <BR ALIGN="LEFT"/>-.33·h7+.33·h27        > fillcolor="#FFFFFF" style="filled" shape="box" margin="0.15,0.1" ];
+"n14" -> "n16"[label="0c" ];
+"n14"[label=<<BR ALIGN="LEFT"/>v14=v15+v16        > fillcolor="#FFD0D0" style="filled" shape="box" margin="0.15,0.1" ];
+"n12" -> "n14"[label="1r1" ];
+"n12"[label=<<BR ALIGN="LEFT"/>v12=r13+r14        <BR ALIGN="LEFT"/>v12≤v13        <BR ALIGN="LEFT"/>v12≤v14        > fillcolor="#D0FFD0" style="filled" shape="box" margin="0.15,0.1" ];
+"n11" -> "n12"[label="0c" ];
+"n18"[label=<<BR ALIGN="LEFT"/>v18=        <BR ALIGN="LEFT"/>.17·h8+.17·h28        > fillcolor="#FFFFFF" style="filled" shape="box" margin="0.15,0.1" ];
+"n17" -> "n18"[label="1f" ];
+"n19"[label=<<BR ALIGN="LEFT"/>v19=        <BR ALIGN="LEFT"/>-.33·h8+.33·h28        > fillcolor="#FFFFFF" style="filled" shape="box" margin="0.15,0.1" ];
+"n17" -> "n19"[label="1c" ];
+"n17"[label=<<BR ALIGN="LEFT"/>v17=r18+r19        <BR ALIGN="LEFT"/>v17≤v18        <BR ALIGN="LEFT"/>v17≤v19        > fillcolor="#D0FFD0" style="filled" shape="box" margin="0.15,0.1" ];
+"n11" -> "n17"[label="0r1" ];
+"n11"[label=<<BR ALIGN="LEFT"/>v11=v12+v17        > fillcolor="#FFD0D0" style="filled" shape="box" margin="0.15,0.1" ];
+"n1" -> "n11"[label="1d{Q}" ];
+"n1"[label=<<BR ALIGN="LEFT"/>v1=v2+v11+v20        > fillcolor="#D0FFD0" style="filled, dotted" shape="ellipse" margin="0.15,0.1" ];
+"n0" -> "n1"[label="0d{}" ];
+{rank=same; round0;
+"n0"[label=<<BR ALIGN="LEFT"/>v0=v1        > fillcolor="#FFD0D0" style="filled, dotted" shape="ellipse" margin="0.15,0.1" ];
+}
+{
+"round0"[fontsize="22" style="bold" peripheries="0" label="Round 0" ];
+}
+}

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SessionSuiteCfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="ai.pkr.metabots.SessionSuiteCfg.xsd">
+    <Name>Test Suite</Name>
+    <LocalPlayers>
+        <LocalPlayerCfg>
+            <Name>RaiserBot1</Name>
+            <Assembly>players.dll</Assembly>
+            <Type>players.RaiserBot</Type>
+            <CreationParameters>
+                <p n="p1" v ="Some creation configuration" />
+            </CreationParameters>
+        </LocalPlayerCfg>
+        <LocalPlayerCfg>
+            <Name>CallerBot1</Name>
+            <Type>PokerServer.Framework.Players.RaiserBot</Type>
+        </LocalPlayerCfg>
+    </LocalPlayers>
+    <Sessions>
+        <SessionCfg>
+            <Name>Ring Game</Name>
+            <GameDefinitionFile>${loc.xml.Dir}SessionSuiteCfg_Test.Gamedef1.xml</GameDefinitionFile>
+            <Kind>RingGame</Kind>
+            <RngSeed>36</RngSeed>
+            <GamesCount>1000</GamesCount>
+            <Players>
+                <PlayerSessionCfg>
+                    <Name>RaiserBot1</Name>
+                    <SessionParameters>
+                        <p n="p1" v ="v1" />
+                        <p n="p2" v ="v2" />
+                    </SessionParameters>
+                </PlayerSessionCfg>
+                <PlayerSessionCfg>
+                    <Name>CallerBot1</Name>
+                </PlayerSessionCfg>
+            </Players>
+        </SessionCfg>
+        <SessionCfg>
+            <Name>Ring Game with seat permutations</Name>
+            <Kind>RingGameWithSeatPermutations</Kind>
+            <GameDefinitionFile>${loc.xml.Dir}SessionSuiteCfg_Test.GameDef2.xml</GameDefinitionFile>
+            <GamesCount>150</GamesCount>
+            <Players>
+                <PlayerSessionCfg>
+                    <Name>RaiserBot1</Name>
+                </PlayerSessionCfg>
+                <PlayerSessionCfg>
+                    <Name>CallerBot1</Name>
+                </PlayerSessionCfg>
+            </Players>
+        </SessionCfg>
+    </Sessions>
+</SessionSuiteCfg>

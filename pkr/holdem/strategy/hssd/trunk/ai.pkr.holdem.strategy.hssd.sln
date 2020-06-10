@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bds", "bds", "{D2769115-6BD9-4B23-A025-0672DB6B182E}"
+	ProjectSection(SolutionItems) = preProject
+		src\main\assembly\assembly.xml = src\main\assembly\assembly.xml
+		src\test\resources\host-test.xml = src\test\resources\host-test.xml
+		pom.xml = pom.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.holdem.strategy.hssd", "src\main\net\ai.pkr.holdem.strategy.hssd\ai.pkr.holdem.strategy.hssd.csproj", "{D0C0E319-EE71-4412-8CAB-CF6D6CEB9655}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.holdem.strategy.hssd.nunit", "src\test\net\ai.pkr.holdem.strategy.hssd.nunit\ai.pkr.holdem.strategy.hssd.nunit.csproj", "{194E4375-FFBD-435E-8884-F358FE0029D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.holdem.strategy.hssd.lut-gen", "src\main\net\ai.pkr.holdem.strategy.hssd.lut-gen\ai.pkr.holdem.strategy.hssd.lut-gen.csproj", "{37ACA4EE-EED7-4BA1-8E34-033F6F94C690}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.holdem.strategy.hssd.hehssd", "src\main\net\ai.pkr.holdem.strategy.hssd.hehssd\ai.pkr.holdem.strategy.hssd.hehssd.csproj", "{102DDB46-A05E-4F04-B47E-E603476D94DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0C0E319-EE71-4412-8CAB-CF6D6CEB9655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0C0E319-EE71-4412-8CAB-CF6D6CEB9655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0C0E319-EE71-4412-8CAB-CF6D6CEB9655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0C0E319-EE71-4412-8CAB-CF6D6CEB9655}.Release|Any CPU.Build.0 = Release|Any CPU
+		{194E4375-FFBD-435E-8884-F358FE0029D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{194E4375-FFBD-435E-8884-F358FE0029D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{194E4375-FFBD-435E-8884-F358FE0029D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{194E4375-FFBD-435E-8884-F358FE0029D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37ACA4EE-EED7-4BA1-8E34-033F6F94C690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37ACA4EE-EED7-4BA1-8E34-033F6F94C690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37ACA4EE-EED7-4BA1-8E34-033F6F94C690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37ACA4EE-EED7-4BA1-8E34-033F6F94C690}.Release|Any CPU.Build.0 = Release|Any CPU
+		{102DDB46-A05E-4F04-B47E-E603476D94DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{102DDB46-A05E-4F04-B47E-E603476D94DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{102DDB46-A05E-4F04-B47E-E603476D94DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{102DDB46-A05E-4F04-B47E-E603476D94DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Example of a deck descriptor -->
+<DeckDescriptor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="ai.pkr.metagame.DeckDescriptor.xsd">
+    <Name>Demo Deck</Name>
+    <CardNames>
+        <i>Q</i>
+        <i>K</i>
+        <i>A</i>
+    </CardNames>
+    <CardSets>
+        <i>1</i>
+        <i>2</i>
+        <i>10</i>
+    </CardSets>
+</DeckDescriptor>

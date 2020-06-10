@@ -1,0 +1,32 @@
+<assembly>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <directory>${project.build.directory}/dist/${ai.build.config}</directory>
+            <outputDirectory>/bin</outputDirectory>
+            <includes>
+                <include>${ai.build.target1}.dll</include>
+                <include>${ai.build.target1}.nunit.dll</include>
+                <include>${ai.build.target1}.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>${project.build.directory}/dist</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>data/${project.groupId}.${project.artifactId}/*.*</include>
+                <include>test/${project.groupId}.${project.artifactId}.nunit/*.*</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+    <files>
+        <file>
+            <outputDirectory>/test</outputDirectory>
+            <source>${project.build.directory}/dist/test/host-test.xml</source>
+            <destName>${project.groupId}.${project.artifactId}.host-test.xml</destName>
+        </file>
+    </files>
+</assembly>

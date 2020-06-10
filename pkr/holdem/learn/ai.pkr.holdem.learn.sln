@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bds", "bds", "{D2769115-6BD9-4B23-A025-0672DB6B182E}"
+	ProjectSection(SolutionItems) = preProject
+		src\main\assembly\assembly.xml = src\main\assembly\assembly.xml
+		src\test\resources\host-test.xml = src\test\resources\host-test.xml
+		pom.xml = pom.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.holdem.learn", "src\main\net\ai.pkr.holdem.learn\ai.pkr.holdem.learn.csproj", "{12A3316E-9CED-451F-947B-86C11E1D4172}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.holdem.learn.nunit", "src\test\net\ai.pkr.holdem.learn.nunit\ai.pkr.holdem.learn.nunit.csproj", "{AE4B4974-EB8C-4FE3-BD27-E6F4331F071F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12A3316E-9CED-451F-947B-86C11E1D4172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12A3316E-9CED-451F-947B-86C11E1D4172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12A3316E-9CED-451F-947B-86C11E1D4172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12A3316E-9CED-451F-947B-86C11E1D4172}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE4B4974-EB8C-4FE3-BD27-E6F4331F071F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE4B4974-EB8C-4FE3-BD27-E6F4331F071F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE4B4974-EB8C-4FE3-BD27-E6F4331F071F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE4B4974-EB8C-4FE3-BD27-E6F4331F071F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

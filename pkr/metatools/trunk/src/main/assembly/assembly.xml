@@ -1,0 +1,36 @@
+<assembly>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <directory>${project.build.directory}/dist/${ai.build.config}</directory>
+            <outputDirectory>/bin</outputDirectory>
+            <includes>
+                <include>${ai.build.target1}.dll</include>
+                <include>${ai.build.target1}.nunit.dll</include>
+                <include>${ai.build.target1}.xml</include>
+                <include>${ai.build.target1}.xml</include>
+                <include>${ai.build.target2}.exe</include>
+                <include>${ai.build.target3}.exe</include>
+                <include>${ai.build.target4}.exe</include>
+                <include>${ai.build.target5}.exe</include>
+                <include>${ai.build.target6}.exe</include>
+                <include>${ai.build.target7}.exe</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+    <files>
+        <file>
+            <outputDirectory>/test</outputDirectory>
+            <source>${project.build.directory}/dist/test/host-test.xml</source>
+            <destName>${project.groupId}.${project.artifactId}.host-test.xml</destName>
+        </file>
+        <file>
+            <outputDirectory>/bin</outputDirectory>
+            <source>${project.build.directory}/dist/${ai.build.config}/${ai.build.target2}.exe.config</source>
+            <destName>${ai.build.target2}.exe.config.default</destName>
+        </file>
+    </files>
+</assembly>

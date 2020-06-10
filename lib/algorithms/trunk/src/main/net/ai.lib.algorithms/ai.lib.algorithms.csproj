@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0A75DFAA-D654-405A-9AD7-DF5EAFC79F17}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ai.lib.algorithms</RootNamespace>
+    <AssemblyName>ai.lib.algorithms</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\target\dist\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1607 1591 1712 1573</NoWarn>
+    <DocumentationFile>..\..\..\..\target\dist\Debug\ai.lib.algorithms.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\target\dist\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1607 1591 1712 1573</NoWarn>
+    <DocumentationFile>..\..\..\..\target\dist\Release\ai.lib.algorithms.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ai.lib.utils, Version=3.0.10262.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\target\dist\bin\ai.lib.utils.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Iridium, Version=2008.8.16.470, Culture=neutral, PublicKeyToken=c061a3ec32cc0c6f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\target\dist\bin\MathNet.Iridium.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\target\generated\LutBitCount.cs">
+      <Link>generated\LutBitCount.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\target\generated\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="color\Gradient.cs" />
+    <Compile Include="ContainerExtensions.cs" />
+    <Compile Include="convert\TextDumpHelper.cs" />
+    <Compile Include="EnumAlgos.cs" />
+    <Compile Include="geometry\CutAABB.cs" />
+    <Compile Include="la\VectorS.cs" />
+    <Compile Include="numbers\CountBits.cs" />
+    <Compile Include="numbers\FloatingPoint.cs" />
+    <Compile Include="numbers\GCD.cs" />
+    <Compile Include="numbers\LCM.cs" />
+    <Compile Include="numbers\Real01.cs" />
+    <Compile Include="opt\GoldenSection.cs" />
+    <Compile Include="parallel\AssigningThreadPool.cs" />
+    <Compile Include="parallel\NamespaceDoc.cs" />
+    <Compile Include="parallel\BlockingThreadPool.cs" />
+    <Compile Include="parallel\ThreadPoolBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="random\AbstractRandomNumberGenerator.cs" />
+    <Compile Include="random\DiscreteProbabilityRng.cs" />
+    <Compile Include="random\MersenneTwister.cs" />
+    <Compile Include="random\RngHelper.cs" />
+    <Compile Include="random\SequenceRng.cs" />
+    <Compile Include="ShortSequence.cs" />
+    <Compile Include="sort\ExternalMergeSort.cs" />
+    <Compile Include="strings\StringHashCode.cs" />
+    <Compile Include="tree\CompareTrees.cs" />
+    <Compile Include="tree\CompareUFTrees.cs" />
+    <Compile Include="tree\SyncUniAndUf.cs" />
+    <Compile Include="tree\CountLeaves.cs" />
+    <Compile Include="tree\CountNodes.cs" />
+    <Compile Include="ExprFormatter.cs" />
+    <Compile Include="tree\FindFirstPreOrder.cs" />
+    <Compile Include="tree\NamespaceDoc.cs" />
+    <Compile Include="tree\UFTree.cs" />
+    <Compile Include="tree\UFToUniAdapter.cs" />
+    <Compile Include="tree\TextualizeTree.cs" />
+    <Compile Include="tree\TreeDefs.cs" />
+    <Compile Include="tree\UFTreeChildrenIndex.cs" />
+    <Compile Include="tree\VisTree.cs" />
+    <Compile Include="tree\WalkUFTreePP.cs" />
+    <Compile Include="tree\WalkTreePP.cs" />
+    <Compile Include="tree\WalkTreeS.cs" />
+    <Compile Include="tree\XmlizeTree.cs" />
+    <Compile Include="tree\XmlTree.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="containers\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ZerocIce_HomeExpanded="C:\Programme\ZeroC\Ice-3.4.1" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

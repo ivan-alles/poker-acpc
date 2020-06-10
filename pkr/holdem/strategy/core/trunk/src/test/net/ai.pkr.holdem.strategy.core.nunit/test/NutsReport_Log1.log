@@ -1,0 +1,6 @@
+﻿0; Patience{0 0.5 4} Fo2{0 1 -4}; 0d{2d Ah} 1d{5d 6d} 0r1 1r1 0r1 1c d{2c Kc Jh} 1c 0r1 1f.
+1; Fo2{-4 0.5 11} Patience{4 1 -11}; 0d{4d Js} 1d{7s 5s} 0r1 1r1 0c d{3c 9d 5h} 1c 0r1 1r1 0r1 1r1 0c d{Jc} 1c 0r2 1r2 0c d{8h} 1c 0c.
+0; Patience{0 0.5 -1} Fo2{0 1 1}; 0d{Ad Ah} 1d{5d 6d} 0c 1c d{Ac As Jh} 1c 0c d{2s} 1c 0c d{3h} 1r2 0f.
+1; Fo2{-4 0.5 -1} Patience{4 1 1}; 0d{7s 5s} 1d{Ac 5c} 0c 1c d{3c 4c 2c} 1c 0c d{Jh} 1c 0c d{8h} 1c 0r2 1c.
+0; Patience{0 0.5 1} Fo2{0 1 -1}; 0d{Ad Ah} 1d{5d 6d} 0c 1c d{Ac As Jh} 1c 0c d{2s} 1c 0c d{3h} 1r2 0c.
+1; Fo2{-4 0.5 1} Patience{4 1 -1}; 0d{7s 5s} 1d{Ac 5c} 0c 1c d{3c 4c 2c} 1c 0c d{Jh} 1c 0c d{8h} 1c 0r2 1f.

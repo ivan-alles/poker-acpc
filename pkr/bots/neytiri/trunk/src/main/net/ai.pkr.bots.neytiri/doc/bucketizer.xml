@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Bucketizer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BucketCount>
+    <int>169</int>
+    <int>4</int>
+    <int>3</int>
+    <int>2</int>
+  </BucketCount>
+</Bucketizer>

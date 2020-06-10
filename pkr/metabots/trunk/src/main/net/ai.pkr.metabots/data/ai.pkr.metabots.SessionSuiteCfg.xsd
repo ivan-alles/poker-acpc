@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="ai.pkr.metabots.SessionSuiteCfg.xsd"
+           xmlns="ai.pkr.metabots.SessionSuiteCfg.xsd"  
+           >
+    <!-- Types. -->
+    <xs:complexType name="Property">
+        <xs:attribute type="xs:string" name="n"/>
+        <xs:attribute type="xs:string" name="v"/>
+    </xs:complexType>
+    <xs:complexType name="Props">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="p"  type="Property" />
+        </xs:sequence>
+    </xs:complexType>    
+    <xs:complexType name="PlayerSessionCfg">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="SessionParameters" type="Props" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="SessionKind">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="RingGame" />
+            <xs:enumeration value="RingGameWithSeatPermutations" />
+            <!--<xs:enumeration value="Tournament" />
+            <xs:enumeration value="LiveRingGame" /> -->
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="SessionCfg">
+        <xs:all>
+            <xs:element minOccurs="1" maxOccurs="1" name="Name" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="Kind" type="SessionKind" />
+            <xs:element minOccurs="1" maxOccurs="1" name="GameDefinitionFile" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="RngSeed" type="xs:int" />
+            <xs:element minOccurs="0" maxOccurs="1" name="RngSeedStep" type="xs:int" />
+            <xs:element minOccurs="0" maxOccurs="1" name="Players" type="ArrayOfPlayerSessionCfg" />
+            <xs:element minOccurs="0" maxOccurs="1" name="GamesCount" type="xs:int" />
+            <xs:element minOccurs="0" maxOccurs="1" name="RepeatCount" type="xs:int" default="1"/>
+            <xs:element minOccurs="0" maxOccurs="1" name="ReplayFrom" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="FixButton" type="xs:boolean" default="false"/>
+        </xs:all>
+    </xs:complexType>
+    <xs:complexType name="ArrayOfPlayerSessionCfg">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="PlayerSessionCfg" nillable="true" type="PlayerSessionCfg" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="SessionSuiteCfg">
+        <xs:all>
+            <xs:element minOccurs="1" maxOccurs="1" name="Name" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="LocalPlayers" type="ArrayOfLocalPlayerCfg" />
+            <xs:element minOccurs="1" maxOccurs="1" name="Sessions" type="ArrayOfSessionConfiguration" />
+        </xs:all>
+    </xs:complexType>
+    <xs:complexType name="ArrayOfLocalPlayerCfg">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="LocalPlayerCfg" nillable="true" type="LocalPlayerCfg" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="LocalPlayerCfg">
+        <xs:all>
+            <xs:element minOccurs="0" maxOccurs="1" name="Assembly" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="Type" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="Name" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="CreationParameters" type="Props" />
+        </xs:all>
+    </xs:complexType>
+    <xs:complexType name="ArrayOfSessionConfiguration">
+        <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="SessionCfg" nillable="true" type="SessionCfg" />
+        </xs:sequence>
+    </xs:complexType>
+    <!-- Elements -->
+    <xs:element name="SessionSuiteCfg" nillable="true" type="SessionSuiteCfg" />
+</xs:schema>

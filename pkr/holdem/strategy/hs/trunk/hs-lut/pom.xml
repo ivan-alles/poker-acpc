@@ -1,0 +1,122 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ai.pkr.holdem.strategy</groupId>
+    <artifactId>hs-lut</artifactId>
+    <!-- This version must be the same as the version in HandStrength.cs -->
+    <version>1.2.0</version>
+    <packaging>pom</packaging>
+
+    <name>Package ${project.groupId}:${project.artifactId}</name>
+    <!--<url></url>-->
+
+    <properties>
+        <ai.ver.major>1</ai.ver.major>
+        <ai.ver.minor>2</ai.ver.minor>
+        <ai.ver.revision>0</ai.ver.revision>
+        <ai.ver.qualifier></ai.ver.qualifier>
+        <!-- Optional list of target files that will be buld, without extension.
+             These values can be used somewhere else, for instance in assembly descriptor.
+        -->
+        <!--<ai.build.target1>${project.groupId}.${project.artifactId}.dll</ai.build.target1>-->
+		<skip-gen>true</skip-gen>
+    </properties>
+    <dependencies>
+    <!-- This package depends on the parent package which must be compiled (Release configuration)
+         before building this package.
+    -->
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>set-props</id>
+                        <phase>validate</phase>
+                        <configuration>
+                            <executable>python</executable>
+                            <arguments>
+                                <argument>${project.basedir}/../target/dist/bin/bds-pom-setprops.py</argument>
+                            </arguments>
+                        </configuration>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+<!--                    <execution>
+                        <id>generate-version-info</id>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <executable>python</executable>
+                            <arguments>
+                                <argument>${env.AI_HOME}/bin/bds-genver.py</argument>
+                                <argument>${project.version}</argument>
+                                <argument>${project.build.directory}\generated\VersionInfo.cs</argument>
+                            </arguments>
+                        </configuration>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+-->
+                    <execution>
+                        <id>build</id>
+                        <phase>compile</phase>
+                        <configuration>
+                            <executable>${project.basedir}/../src/main/net/ai.pkr.holdem.strategy.hs.lut-gen/bin/Release/ai.pkr.holdem.strategy.hs.lut-gen.exe</executable>
+                            <arguments>
+                                <argument>-d:ai.Root=${project.basedir}/../target/dist</argument>
+			        <argument>-o:${project.basedir}/target/dist/data</argument>
+                            </arguments>
+                            <skip>${skip-gen}</skip>
+                        </configuration>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptors>
+                        <descriptor>${project.basedir}/src/main/assembly/assembly.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>zip</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <extensions>
+            <!-- Enabling the use of FTP -->
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ftp</artifactId>
+                <version>1.0-beta-6</version>
+            </extension>
+        </extensions>
+    </build>
+    <!-- Commented out on purpoise, mvn release will not work as necessary with this pom,
+         it will creaate a tag without parent, and we need the parent too.
+         Releases must be done manually for this project.
+    <scm>
+        <connection>scm:svn:${env.AI_SVNDB}/ai/pkr/ct/trunk/hs-lut</connection>
+    </scm>
+    -->
+    <distributionManagement>
+        <repository>
+            <id>bdsDeployRepo</id>
+            <url>${ai.bdsDeployRepo.url}</url>
+        </repository>
+    </distributionManagement>
+</project>

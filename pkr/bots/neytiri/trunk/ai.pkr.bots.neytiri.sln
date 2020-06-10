@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".solution", ".solution", "{18015666-C5BF-4103-92FD-56F5022ADF74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.bots.neytiri", "src\main\net\ai.pkr.bots.neytiri\ai.pkr.bots.neytiri.csproj", "{34C71820-AB07-4A0A-B267-6C6C43EC2ECB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.bots.neytiri.builder", "src\main\net\ai.pkr.bots.neytiri.builder\ai.pkr.bots.neytiri.builder.csproj", "{A08BAE8D-D54C-40BF-9529-026CC600F634}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bds", "bds", "{E34F894C-547C-408E-9D59-85CAE4F9F0C3}"
+	ProjectSection(SolutionItems) = preProject
+		src\main\assembly\assembly.xml = src\main\assembly\assembly.xml
+		code-coverage.bat = code-coverage.bat
+		src\test\resources\host-test.xml = src\test\resources\host-test.xml
+		pom.xml = pom.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34C71820-AB07-4A0A-B267-6C6C43EC2ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34C71820-AB07-4A0A-B267-6C6C43EC2ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34C71820-AB07-4A0A-B267-6C6C43EC2ECB}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{34C71820-AB07-4A0A-B267-6C6C43EC2ECB}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{34C71820-AB07-4A0A-B267-6C6C43EC2ECB}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{34C71820-AB07-4A0A-B267-6C6C43EC2ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34C71820-AB07-4A0A-B267-6C6C43EC2ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34C71820-AB07-4A0A-B267-6C6C43EC2ECB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{34C71820-AB07-4A0A-B267-6C6C43EC2ECB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{34C71820-AB07-4A0A-B267-6C6C43EC2ECB}.Release|Win32.ActiveCfg = Release|Any CPU
+		{A08BAE8D-D54C-40BF-9529-026CC600F634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A08BAE8D-D54C-40BF-9529-026CC600F634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A08BAE8D-D54C-40BF-9529-026CC600F634}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A08BAE8D-D54C-40BF-9529-026CC600F634}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A08BAE8D-D54C-40BF-9529-026CC600F634}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{A08BAE8D-D54C-40BF-9529-026CC600F634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A08BAE8D-D54C-40BF-9529-026CC600F634}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A08BAE8D-D54C-40BF-9529-026CC600F634}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A08BAE8D-D54C-40BF-9529-026CC600F634}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A08BAE8D-D54C-40BF-9529-026CC600F634}.Release|Win32.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

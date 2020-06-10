@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bds", "bds", "{D2769115-6BD9-4B23-A025-0672DB6B182E}"
+	ProjectSection(SolutionItems) = preProject
+		src\main\assembly\assembly.xml = src\main\assembly\assembly.xml
+		src\test\resources\host-test.xml = src\test\resources\host-test.xml
+		pom.xml = pom.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.holdem.strategy.ahvo", "src\main\net\ai.pkr.holdem.strategy.ahvo\ai.pkr.holdem.strategy.ahvo.csproj", "{ADDA76BF-A21B-402B-9DEB-A85C41F2B4EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.holdem.strategy.ahvo.nunit", "src\test\net\ai.pkr.holdem.strategy.ahvo.nunit\ai.pkr.holdem.strategy.ahvo.nunit.csproj", "{04CE2724-3169-49F8-BBE4-DCBFC92F03C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.holdem.strategy.ahvo.lutgen", "src\main\net\ai.pkr.holdem.strategy.ahvo.lutgen\ai.pkr.holdem.strategy.ahvo.lutgen.csproj", "{D225B02A-39B5-447F-BE57-DC9384CCFADA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADDA76BF-A21B-402B-9DEB-A85C41F2B4EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADDA76BF-A21B-402B-9DEB-A85C41F2B4EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADDA76BF-A21B-402B-9DEB-A85C41F2B4EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADDA76BF-A21B-402B-9DEB-A85C41F2B4EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04CE2724-3169-49F8-BBE4-DCBFC92F03C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04CE2724-3169-49F8-BBE4-DCBFC92F03C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04CE2724-3169-49F8-BBE4-DCBFC92F03C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04CE2724-3169-49F8-BBE4-DCBFC92F03C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D225B02A-39B5-447F-BE57-DC9384CCFADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D225B02A-39B5-447F-BE57-DC9384CCFADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D225B02A-39B5-447F-BE57-DC9384CCFADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D225B02A-39B5-447F-BE57-DC9384CCFADA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

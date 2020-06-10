@@ -1,0 +1,33 @@
+<project name="SimpleBot" default="simpleBot.jar" basedir=".">
+	
+	<description>
+		Builds an Example Bot
+	</description>
+	
+	<!-- set global properties for this build -->
+	<property name="source" location="source"/>
+	<property name="build" location="build"/>
+	
+	<target name="init">
+		<!-- Create the build directory structure used by compile -->
+		<mkdir dir="${build}"/>
+	</target>
+
+   <!-- ********************************************************** -->
+	<target name="compile" depends="init" description="compile the bot with the library">	        
+		<!-- Compile the java code from ${src} into ${build} -->
+		<javac 
+			source="1.4" 
+			srcdir="${source}" 
+			destdir="${build}" 
+			classpath="meerkat-api.jar">
+        </javac>
+	</target>
+	 
+   <!-- ********************************************************** -->
+	<target name="simpleBot.jar" depends="compile" description="generate the distribution" >
+		<jar jarfile="simpleBot.jar" basedir="${build}">				
+		</jar>
+	</target>
+	     
+</project>

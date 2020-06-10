@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                xmlns="ai.pkr.metagame.GameDefinition.xsd"
+                >
+<!--
+Game dimension: 193.
+
+From "Strategy Grafting in Extensive Games", UoA.
+
+Leduc Hold’em is a two player poker game. The deck used in Leduc Hold’em contains six cards,
+two jacks, two queens and two kings, and is shuffled prior to playing a hand. At the beginning of a
+hand, each player pays a one chip ante to the pot and receives one private card. A round of betting
+then takes place starting with player one. After the round of betting, a single public card is revealed
+from the deck, which both players use to construct their hand. This card is called the flop. Another
+round of betting occurs after the flop, again starting with player one, and then a showdown takes
+place. At a showdown, if either player has paired their private card with the public card they win all
+the chips in the pot. In the event neither player pairs, the player with the higher card is declared the
+winner. The players split the money in the pot if they have the same private card.
+
+Each betting round follows the same format. The first player to act has the option to check or bet.
+When betting the player adds chips into the pot and action moves to the other player. When a player
+faces a bet, they have the option to fold, call or raise. When folding, a player forfeits the hand and
+all the money in the pot is awarded to the opposing player. When calling, a player places enough
+chips into the pot to match the bet faced and the betting round is concluded. When raising, the player
+must put more chips into the pot than the current bet faced and action moves to the opposing player.
+If the first player checks initially, the second player may check to conclude the betting round or bet.
+In Leduc Hold’em there is a limit of one bet and one raise per round. The bets and raises are of a
+fixed size. This size is two chips in the first betting round and four chips in the second.
+-->    
+    <Name>LeducHe</Name>
+    <LimitKind>FixedLimit</LimitKind>
+    <MinPlayers>2</MinPlayers>
+    <MaxPlayers>2</MaxPlayers>
+    <BlindStructure>
+        <i>0.5</i>
+        <i>0.5</i>
+    </BlindStructure>
+    <BetStructure>
+        <i>1</i>
+        <i>2</i>
+    </BetStructure>
+    <RoundsCount>2</RoundsCount>
+    <FirstActor>
+        <i>0</i>
+        <i>0</i>
+    </FirstActor>
+    <FirstActorHeadsUp>
+        <i>0</i>
+        <i>0</i>
+    </FirstActorHeadsUp>
+    <BetsCountLimits>
+        <i>3</i>
+        <i>2</i>
+    </BetsCountLimits>
+    <PrivateCardsCount>
+        <i>1</i>
+        <i>0</i>
+    </PrivateCardsCount>
+    <PublicCardsCount>
+        <i>0</i>
+        <i>0</i>
+    </PublicCardsCount>
+    <SharedCardsCount>
+        <i>0</i>
+        <i>1</i>
+    </SharedCardsCount>
+    <DeckDescrFile>${bds.DataDir}/ai.pkr.metastrategy/leduc-he.deck.xml</DeckDescrFile>
+    <GameRulesAssemblyFile></GameRulesAssemblyFile>
+    <GameRulesType>ai.pkr.metastrategy.model_games.LeducHeRules,ai.pkr.metastrategy</GameRulesType>
+    <GameRulesCreationParams></GameRulesCreationParams>
+</GameDefinition>

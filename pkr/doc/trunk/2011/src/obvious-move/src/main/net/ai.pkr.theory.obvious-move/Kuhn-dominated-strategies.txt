@@ -1,0 +1,11 @@
+﻿From Kuhn about eliminating dominated strategies:
+
+Obviously, no player will decide either to bet on a J (0.1: h7=0, h6=1. 1.1: h9=1, h10=0) or 
+to pass with a K (0.2: h26=0, h27=1. 1.2: h27=0, h28=1) when confronted by a bet.
+...
+Now that these strategies have been eliminated new dominations appear. First, we notice that if
+player 0 holds a Q he may as well pass in the first round, deciding to bet in the second if confronted by a bet,
+as bet originally (0.3: h13 = 1, h18 = 0). On either strategy he will lose the same amount if player 1 holds a K; 
+on the other hand, player 1 may bet on J if confronted by a pass but certainly will not iif confronted by a bet.
+Secondly, player 1 may as well pass a bet, when holding a Q and confronted by a pass (1.3: h13=1, h14=0) since
+player 0 will now answer a bet only when he holds a K.

@@ -1,0 +1,2 @@
+﻿Solve 1-card poker.
+http://www.cs.cmu.edu/~ggordon/poker/

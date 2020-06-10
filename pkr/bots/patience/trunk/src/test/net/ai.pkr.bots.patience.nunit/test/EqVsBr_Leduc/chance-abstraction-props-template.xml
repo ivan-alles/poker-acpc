@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- A template to dynamically create propertis for chance abstraction for Patience tests -->
+<Props XmlMergeWithGlobal = "true">
+    <p n="TypeName" v="ai.pkr.metastrategy.model_games.LeducHeChanceAbstraction,ai.pkr.metastrategy"/>
+    <p n="AssemblyFileName" v=""/>
+    <p n="BucketsString" v="will be set in test"/>
+</Props>

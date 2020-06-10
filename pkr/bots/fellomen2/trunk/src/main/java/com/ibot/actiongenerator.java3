@@ -1,0 +1,415 @@
+
+
+import poker.*;
+import poker.ai.HandPotential;
+import poker.util.*;
+import java.io.*;
+
+
+// This prints a distribution of raw look ahead hand strength vs. PPot
+
+
+public class actiongenerator
+{
+public static void main(String[] args)
+{
+
+// definitions
+Deck   d = new Deck();
+HandEvaluator 	he = new HandEvaluator();
+HandPotential   pot = new HandPotential();
+double              p, n, rollstr, turnp, turnn, turnrollstr,rivrank;				//PPOT and NPOT and roll out hand str
+boolean            full = true;					//true if two card look ahead
+Hand                hnd = new Hand();			//board
+Card                c1 = new Card(0,0);
+Card				c2 = new Card(0,0);			//hole cards
+Card				c3 = new Card(0,0);			//hole cards
+double[][]			action_table;
+int index;
+double              rank=0.0, turnrank=0.0;                   //and non rollout handstr							//size of sample (number of hands we are going to try)
+
+
+
+	   //set up deck
+         d.reset();
+	 d.shuffle();
+		//set up hand and board cards
+       c1=d.dealCard();
+       c2=d.dealCard();
+       
+       
+       
+       
+       
+       hnd.addCard(d.dealCard());
+       hnd.addCard(d.dealCard());
+       hnd.addCard(d.dealCard());
+       
+       index = get_turn_hs_index(1);
+       
+       System.out.println(index);
+       System.out.println(get_turn_pot_index(index,.01));
+       System.out.println(get_turn_index(1,.01));
+      System.out.println(c1);
+      System.out.println(c1.getRank());
+      System.out.println(c2);
+      System.out.println(get_preflop_index(c1 , c2));
+  
+}
+
+
+
+// Given a two card look ahead raw rollout hand strength (hs), returns the hand strength index
+// used to calculate the flop index = potential index + 3 * hand strength index
+static int get_flop_hs_index(double hs)
+{
+    double[] hs_cut=
+{-0.000001,
+0.181544252789233,
+0.200836647029158,
+0.217373918198409,
+0.232017712292626,
+0.246239886663516,
+0.260174103759041,
+0.27339631350859,
+0.285753517744523,
+0.297962343498009,
+0.310095687686203,
+0.32186981232169,
+0.333162662183268,
+0.344575207993462,
+0.356257937033919,
+0.367856916833342,
+0.379220625815026,
+0.390338819611395,
+0.401287140013947,
+0.412022467628200,
+0.423170875558737,
+0.434241156388333,
+0.445126185985659,
+0.455659695004962,
+0.465906118315088,
+0.476379243262447,
+0.487267497291244,
+0.499876871165698,
+0.51311016219907,
+0.52684683311287,
+0.539418628311735,
+0.551768777025384,
+0.563405216131474,
+0.575565364697799,
+0.588808686043918,
+0.602749800552269,
+0.617998657701427,
+0.635077682952633,
+0.652877538838724,
+0.671054550590374,
+0.690404769284426,
+0.709803058208682,
+0.730317635994792,
+0.752039620365224,
+0.77413830963123,
+0.7964623063303,
+0.81843622223922,
+0.840412695196338,
+0.867644527988236,
+0.9187732141721,
+1.000001};
+    boolean isNotHS=true;
+    int i=0;
+    int hs_pos=-1;
+    
+    while(isNotHS)
+    {
+        if(hs>hs_cut[i] & hs<=hs_cut[i+1])
+        {
+            hs_pos=i;
+            isNotHS=false;
+        }
+        i=i+1;
+    }
+    return(hs_pos);
+
+}
+
+// Given a two card look ahead raw hand potential (pot), returns the potential index
+// used to calculate the flop index = potential index + 3 * hand strength index
+static int get_flop_pot_index(int hs_pos,double pot)
+{
+double[][] pot_cut =
+{
+{0 ,0.15446891060302 ,0.168207330082003 ,1},
+{0 ,0.171927356628879 ,0.185522202469478 ,1},
+{0 ,0.180162779736363 ,0.198555569319922 ,1},
+{0 ,0.184652671821523 ,0.209812294207387 ,1},
+{0 ,0.187872835940296 ,0.216469202852587 ,1},
+{0, 0.188538554515512 ,0.223861380624609 ,1},
+{0 ,0.191510547015485 ,0.233470404103572 ,1},
+{0 ,0.195242106811229 ,0.259495869239685 ,1},
+{0 ,0.197727630706016 ,0.275183813264395, 1},
+{0 ,0.197822631860572 ,0.286293984776053 ,1},
+{0 ,0.199087240608318 ,0.293109924946957 ,1},
+{0 ,0.200586002868145 ,0.299192492030321 ,1},
+{0 ,0.200174475745015 ,0.295899745586601 ,1},
+{0 ,0.196648453655905 ,0.301999040219217 ,1},
+{0, 0.197024291598699 ,0.297052339331202 ,1},
+{0 ,0.200956938672215 ,0.301928334871592 ,1},
+{0 ,0.200469339699069 ,0.307183900935471 ,1},
+{0 ,0.198952565803905 ,0.319001417167812 ,1},
+{0 ,0.196861278783063 ,0.329524667449596 ,1},
+{0 ,0.20105074371019 ,0.342425165848121 ,1},
+{0 ,0.204640685774658 ,0.35160484072126 ,1},
+{0 ,0.205288867984476 ,0.345117507100926 ,1},
+{0 ,0.205622402543699 ,0.36439765764187 ,1},
+{0 ,0.197749255704146 ,0.356550626063685 ,1},
+{0 ,0.194801684316554, 0.359017082894017 ,1},
+{0 ,0.198987891247145 ,0.379558049506607 ,1},
+{0 ,0.207354911486219 ,0.381521172393905 ,1},
+{0 ,0.214408687120253 ,0.401483864360180 ,1},
+{0 ,0.220146705998896 ,0.403477221401824 ,1},
+{0 ,0.217193730298096 ,0.400221555787366 ,1},
+{0 ,0.209807973992188 ,0.394505038437956 ,1},
+{0 ,0.204326434764826 ,0.380229926967204 ,1},
+{0 ,0.20377732917583 ,0.385542794781996 ,1},
+{0 ,0.206088393516337 ,0.398418764790008 ,1},
+{0 ,0.207607491023066 ,0.413886569750228 ,1},
+{0 ,0.208422787429346 ,0.428492481390421 ,1},
+{0 ,0.205276237802151 ,0.435578212930672 ,1},
+{0 ,0.202150571563220 ,0.421533735919171 ,1},
+{0 ,0.195767963861794 ,0.42443570596143 ,1},
+{0 ,0.194021047220124 ,0.382226840468506 ,1},
+{0 ,0.191548493127171, 0.357075419555427 ,1},
+{0 ,0.1919208402582 ,0.307036385541455 ,1},
+{0 ,0.190880522098022 ,0.279885062127063 ,1},
+{0 ,0.190348409781248 ,0.248434408074137 ,1},
+{0 ,0.190203382826581 ,0.243944963673039 ,1},
+{0 ,0.190548778147559 ,0.244616517577496 ,1},
+{0 ,0.190436451599508 ,0.247490535906714 ,1},
+{0 ,0.180514517283153 ,0.246644213264768 ,1},
+{0 ,0.152259637442980 ,0.304463783999792 ,1},
+{0 ,0.158127651325567 ,0.268577876638888 ,1}
+};
+    boolean isNotPOT =true;
+    int j=0;
+    int pot_pos=-1;
+
+    while(isNotPOT)
+    {
+        if(pot>pot_cut[hs_pos][j] & pot<=pot_cut[hs_pos][j+1])
+        {
+            pot_pos = j;
+            isNotPOT=false;
+	}
+	j=j+1;
+    }
+return(pot_pos);
+
+}
+
+//returns the column from which to look up the raise/call/fold probabilities.
+static int get_flop_index(double rolloutHandStrength , double handPotential)
+{
+    int handStrengthIndex = get_flop_hs_index(rolloutHandStrength);
+    return (get_flop_pot_index(handStrengthIndex,handPotential) + 3 * handStrengthIndex );
+}
+
+// Given a one card look ahead raw rollout hand strength (hs), returns the hand strength index
+// used to calculate the turn index = potential index + 2 * hand strength index
+static int get_turn_hs_index(double hs)
+{
+    double[] hs_cut=
+{-0.000001,
+0.112634769903179,
+0.140111830589561,
+0.158231262632867,
+0.175551523436434,
+0.190404203118093,
+0.205642675792601,
+0.220914180391400,
+0.23725014184527,
+0.250414132184526,
+0.263761190305986,
+0.276967136014977,
+0.292740354043576,
+0.308044832449848,
+0.32162857928786,
+0.335139788303266,
+0.348078628789926,
+0.361748512657138,
+0.377979665776275,
+0.394672043963782,
+0.408401347946908,
+0.420667187440027,
+0.433178424557057,
+0.446861319181086,
+0.464581222293291,
+0.483303405004114,
+0.497796892757634,
+0.510063287802284,
+0.522367092006512,
+0.535865459595627,
+0.55138702975163,
+0.56849112110048,
+0.587829379598759,
+0.606546754226979,
+0.622899440907487,
+0.64020599517608,
+0.659114103961103,
+0.681613244520766,
+0.703517326160017,
+0.724198243217069,
+0.743525726979379,
+0.763078388215879,
+0.784933086846695,
+0.807640769567748,
+0.827716042743575,
+0.84578433681309,
+0.866982325836376,
+0.88962188899652,
+0.93110658891413,
+0.954618287605292,
+1.00001};
+    boolean isNotHS=true;
+    int i=0;
+    int hs_pos=-1;
+    
+    while(isNotHS)
+    {
+        if(hs>hs_cut[i] & hs<=hs_cut[i+1])
+        {
+            hs_pos=i;
+            isNotHS=false;
+        }
+        i=i+1;
+    }
+    return(hs_pos);
+
+}
+
+
+static int get_turn_pot_index(int hs_pos,double pot)
+{
+double[][] pot_cut =
+{
+{0 ,0.0809067712940403 ,1},
+{0 ,0.107682668372989 ,1},
+{0 ,0.134933687326074 ,1},
+{0 ,0.150266956029266 ,1},
+{0 ,0.151860333204384 ,1},
+{0 ,0.158161895319869 ,1},
+{0 ,0.161661779913827 ,1},
+{0 ,0.187614946636687 ,1},
+{0 ,0.191046826094697 ,1},
+{0 ,0.185984341954118 ,1},
+{0 ,0.19952238025432 ,1},
+{0 ,0.202472000174088 ,1},
+{0 ,0.199747497115710 ,1},
+{0 ,0.217355923226479 ,1},
+{0 ,0.182907314087687 ,1},
+{0 ,0.179944675770932 ,1},
+{0 ,0.216273200754784 ,1},
+{0 ,0.218169692694361 ,1},
+{0 ,0.198632274752692 ,1},
+{0 ,0.199478440246257 ,1},
+{0 ,0.201206336565304 ,1},
+{0 ,0.184244945703157 ,1},
+{0 ,0.178304655485895 ,1},
+{0 ,0.208183699206133 ,1},
+{0 ,0.235856154613377 ,1},
+{0 ,0.179296834139245 ,1},
+{0 ,0.16623553123154 ,1},
+{0 ,0.169625354948584 ,1},
+{0 ,0.179728835239196 ,1},
+{0 ,0.180248655700985 ,1},
+{0 ,0.175398309601239 ,1},
+{0 ,0.167573803629092 ,1},
+{0 ,0.180064520889617 ,1},
+{0 ,0.180651309983407 ,1},
+{0 ,0.148865535725672 ,1},
+{0 ,0.138948531542982 ,1},
+{0 ,0.156346079432537 ,1},
+{0 ,0.162826810726763 ,1},
+{0 ,0.157404249200472 ,1},
+{0 ,0.132107050451034 ,1},
+{0 ,0.122422172318065 ,1},
+{0 ,0.145367818903734 ,1},
+{0 ,0.158458802897437 ,1},
+{0 ,0.143645944945377 ,1},
+{0 ,0.147112029568557 ,1},
+{0 ,0.16530838776121 ,1},
+{0 ,0.154580212789469 ,1},
+{0 ,0.157912931493879 ,1},
+{0 ,0.161481033021670 ,1},
+{0 ,0.0462962962962963, 1},
+};
+    boolean isNotPOT =true;
+    int j=0;
+    int pot_pos=-1;
+
+    while(isNotPOT)
+    {
+        if(pot>pot_cut[hs_pos][j] & pot<=pot_cut[hs_pos][j+1])
+        {
+            pot_pos = j;
+            isNotPOT=false;
+	}
+	j=j+1;
+    }
+return(pot_pos);
+
+}
+//returns the column from which to look up the raise/call/fold probabilities.
+static int get_turn_index(double rolloutHandStrength , double handPotential)
+{
+    int handStrengthIndex = get_turn_hs_index(rolloutHandStrength);
+    return (get_turn_pot_index(handStrengthIndex,handPotential) + 2 * handStrengthIndex );
+}
+
+
+ 
+// Given a hand rank (hs), returns the column from which to look up the raise/call/fold probabilities.
+static int get_river_index(double hs)
+{
+    double[] hs_cut=
+{-0.000001, 0.02 ,0.04, 0.06, 0.08 ,0.10 ,0.12 ,0.14 ,0.16 ,0.18 ,0.20 ,0.22 ,0.24 ,0.26 ,0.28 ,0.30, 0.32, 0.34 ,0.36 ,0.38 ,0.40 ,0.42 ,0.44 ,0.46
+ ,0.48, 0.50, 0.52 ,0.54 ,0.56, 0.58, 0.60, 0.62 ,0.64 ,0.66, 0.68 ,0.70 ,0.72 ,0.74 ,0.76 ,0.78 ,0.80 ,0.82 ,0.84 ,0.86 ,0.88 ,0.90 ,0.92, 0.94
+ ,0.96 ,0.98 ,1.000001};
+    boolean isNotHS=true;
+    int i=0;
+    int hs_pos=-1;
+    
+    while(isNotHS)
+    {
+        if(hs>hs_cut[i] & hs<=hs_cut[i+1])
+        {
+            hs_pos=i;
+            isNotHS=false;
+        }
+        i=i+1;
+    }
+    return(hs_pos);
+
+}
+
+//returns the column from which to look up the raise/call/fold probabilities.
+static int get_preflop_index(Card c1 , Card c2)
+{
+    if(c1.getSuit()==c2.getSuit())
+    {
+        if(c1.getRank()>c2.getRank())
+        {
+            return (c1.getRank()+13*c2.getRank());
+        }
+        return(c2.getRank()+13*c1.getRank());
+    }
+     if(c1.getRank()>c2.getRank())
+     {       
+        return (c2.getRank()+13*c1.getRank());
+     }
+     return(c1.getRank()+13*c2.getRank());
+}
+
+//static double[][] get_action_table(){}
+
+
+}

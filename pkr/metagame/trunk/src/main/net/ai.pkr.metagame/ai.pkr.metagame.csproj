@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7B34AF6B-5BA0-4496-A37D-2057F23D97FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ai.pkr.metagame</RootNamespace>
+    <AssemblyName>ai.pkr.metagame</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\target\dist\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1607 1591 1573</NoWarn>
+    <DocumentationFile>..\..\..\..\target\dist\Debug\ai.pkr.metagame.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\target\dist\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1607 1591 1573</NoWarn>
+    <DocumentationFile>..\..\..\..\target\dist\Release\ai.pkr.metagame.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ai.lib.algorithms, Version=3.0.6058.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\target\dist\bin\ai.lib.algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="ai.lib.utils, Version=3.0.6058.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\target\dist\bin\ai.lib.utils.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\target\generated\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Ak.cs" />
+    <Compile Include="DeckDescriptor.cs" />
+    <Compile Include="GameDefinition.cs" />
+    <Compile Include="GameLogParser.cs" />
+    <Compile Include="GameRecord.cs" />
+    <Compile Include="GameRulesExample.cs" />
+    <Compile Include="PokerAction.cs" />
+    <Compile Include="Showdown.cs" />
+    <Compile Include="GameState.cs" />
+    <Compile Include="GameStringParser.cs" />
+    <Compile Include="IGameRules.cs" />
+    <Compile Include="CardSet.cs" />
+    <Compile Include="PlayerState.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StdDeck.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\ai.pkr.metagame.GameDefinition.xsd">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\ai.pkr.metagame.DeckDescriptor.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\stddeck.xml" />
+    <Content Include="doc\examples\deck-demo.xml" />
+    <Content Include="doc\examples\gamedef-demo.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /E /I /S /Y $(ProjectDir)data $(SolutionDir)\target\dist\data\$(TargetName) &gt;nul
+xcopy /E /I /S /Y $(ProjectDir)doc $(SolutionDir)\target\dist\\doc\$(TargetName) &gt;nul</PostBuildEvent>
+  </PropertyGroup>
+</Project>

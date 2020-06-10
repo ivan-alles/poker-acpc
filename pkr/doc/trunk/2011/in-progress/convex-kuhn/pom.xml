@@ -1,0 +1,105 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ai.pkr.theory</groupId>
+    <artifactId>obvious-move</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>ai.bds</groupId>
+        <artifactId>pom-net</artifactId>
+        <version>1.2.0-SNAPSHOT</version>
+    </parent>
+
+    <name>Package ai.pkr.theory:obvious-move</name>
+    <!--<url></url>-->
+
+    <properties>
+        <ai.ver.major>1</ai.ver.major>
+        <ai.ver.minor>0</ai.ver.minor>
+        <ai.ver.revision>0</ai.ver.revision>
+        <ai.ver.qualifier>SNAPSHOT</ai.ver.qualifier>
+        <!-- Default build configuration. To override, call mvn -Dai.build.config=Name. -->
+        <ai.build.config>Release</ai.build.config>
+        <!-- Optional list of target files that will be buld, without extension.
+             These values can be used somewhere else, for instance in assembly descriptor.
+        -->
+        <ai.build.target1>${project.groupId}.obvious-move</ai.build.target1>
+    </properties>
+
+    <dependencies>
+        <!-- Add your dependencies here -->
+        <dependency>
+            <groupId>ai.lib</groupId>
+            <artifactId>utils</artifactId>
+            <version>[2.*,3.0.0)</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>ai.lib</groupId>
+            <artifactId>algorithms</artifactId>
+            <version>[2.*,3.0.0)</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>ai.pkr</groupId>
+            <artifactId>metagame</artifactId>
+            <version>[2.*,3.0.0)</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>ai.pkr</groupId>
+            <artifactId>metabots</artifactId>
+            <version>[2.*,3.0.0)</version>
+            <type>zip</type>
+        </dependency>
+      <dependency>
+        <groupId>ai.pkr</groupId>
+        <artifactId>metastrategy</artifactId>
+        <version>[1.*,2.0.0)</version>
+        <type>zip</type>
+      </dependency>
+    </dependencies>
+
+<build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>generate-files</id>
+                        <phase>compile</phase>
+                        <configuration>
+                            <executable>nunit-console</executable>
+                            <arguments>
+                                <argument>/xml=${project.basedir}/target/${ai.build.target1}.nunit.xml</argument>
+                                <argument>/exclude=${ai.nunit.exclude}</argument>
+                                <argument>${project.basedir}/target/dist/${ai.build.config}/${ai.build.target1}.dll</argument>
+                            </arguments>
+                            <skip>${skipTests}</skip>
+                        </configuration>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>generate-files-2</id>
+                        <phase>compile</phase>
+                        <configuration>
+                            <executable>build-output.bat</executable>
+                        </configuration>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <scm>
+        <connection>scm:svn:${env.AI_SVNDB}/ai/pkr/metastrategy/trunk</connection>
+    </scm>    
+</project>

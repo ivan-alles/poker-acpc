@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Props XmlMergeWithGlobal="True">
+  <p n="TypeName" v="ai.pkr.metastrategy.model_games.LeducHeChanceAbstraction,ai.pkr.metastrategy.2" />
+  <p n="AssemblyFileName" v="" />
+  <p n="BucketsString" v="J,Q,K:JJ,QQ,KK:JQ,QJ,QK:JK,KJ,KQ" />
+</Props>

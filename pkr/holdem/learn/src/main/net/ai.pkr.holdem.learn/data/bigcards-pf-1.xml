@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Assume the following scenario. SB and BB have both big pockets preflop and 100 BB stacks,
+     and the rest have folded. They SB raises, BB reraises, SB reraises again.
+     Now BB can fold or go all-in, in the latter case SB can call or fold.
+     
+     Rasing:
+        SB           BB           Pot
+0.     0.5                        0.5           - small blind
+1.                  1.0           1.5           - big blind
+2.     3.5                        5.0           - SB raises to 3 BB
+3.                 11.0          16.0           - BB raises pot-size
+4.    32.0                       48.0           - SB raises pot-size
+5.                 88.0         136.0
+
+-->
+<p p="2" a="0" ap="3" r ="-1">
+    <p p="0" a="36" ap="3" r ="-1">
+        <p p="1" a="12" ap="3" r ="-1">
+            <p p="1" a="0" ap="1" r="0"/>
+            <p p="1" a="88" ap="3" r="0">
+                <p p="0" a="0" ap="2" r="0"/>
+                <p p="0" a="64" ap="3" r="0"/>
+            </p>
+        </p>
+    </p>
+</p>

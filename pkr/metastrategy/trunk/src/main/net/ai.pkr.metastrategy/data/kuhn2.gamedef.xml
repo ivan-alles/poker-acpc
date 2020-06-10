@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                xmlns="ai.pkr.metagame.GameDefinition.xsd"
+                >
+<!-- 
+    Similar to Kuhn poker, but with raise limit of 2 (dimension: 13).
+    This creates nodes with tree actions (f, c, r).
+-->    
+    <Name>KunhPoker2</Name>
+    <LimitKind>FixedLimit</LimitKind>
+    <MinPlayers>2</MinPlayers>
+    <MaxPlayers>2</MaxPlayers>
+    <BlindStructure>
+        <i>1</i>
+        <i>1</i>
+    </BlindStructure>
+    <BetStructure>
+        <i>1</i>
+    </BetStructure>
+    <RoundsCount>1</RoundsCount>
+    <FirstActor>
+        <i>0</i>
+    </FirstActor>
+    <FirstActorHeadsUp>
+        <i>0</i>
+    </FirstActorHeadsUp>
+    <BetsCountLimits>
+        <i>3</i>
+    </BetsCountLimits>
+    <PrivateCardsCount>
+        <i>1</i>
+    </PrivateCardsCount>
+    <PublicCardsCount>
+        <i>0</i>
+    </PublicCardsCount>
+    <SharedCardsCount>
+        <i>0</i>
+    </SharedCardsCount>
+    <DeckDescrFile>${bds.DataDir}/ai.pkr.metastrategy/kuhn.deck.xml</DeckDescrFile>
+    <GameRulesAssemblyFile></GameRulesAssemblyFile>
+    <GameRulesType>ai.pkr.metastrategy.model_games.KuhnRules,ai.pkr.metastrategy</GameRulesType>
+    <GameRulesCreationParams></GameRulesCreationParams>
+</GameDefinition>

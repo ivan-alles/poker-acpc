@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{440E36AD-FEA6-4169-8EF3-8F8C313682F3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>bucketizer_proto</RootNamespace>
+    <AssemblyName>bucketizer-proto</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>target\dist\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>target\dist\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ai.lib.algorithms.3, Version=3.0.8052.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>target\dist\bin\ai.lib.algorithms.3.dll</HintPath>
+    </Reference>
+    <Reference Include="ai.lib.utils.3, Version=3.0.7963.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>target\dist\bin\ai.lib.utils.3.dll</HintPath>
+    </Reference>
+    <Reference Include="ai.pkr.holdem.gamedef.2, Version=2.0.7964.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>target\dist\bin\ai.pkr.holdem.gamedef.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ai.pkr.holdem.strategy.core.2, Version=2.0.7964.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>target\dist\bin\ai.pkr.holdem.strategy.core.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ai.pkr.holdem.strategy.hand-value.1, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>target\dist\bin\ai.pkr.holdem.strategy.hand-value.1.dll</HintPath>
+    </Reference>
+    <Reference Include="ai.pkr.holdem.strategy.hs.2, Version=2.0.7964.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>target\dist\bin\ai.pkr.holdem.strategy.hs.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ai.pkr.metabots.3, Version=3.0.7963.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>target\dist\bin\ai.pkr.metabots.3.dll</HintPath>
+    </Reference>
+    <Reference Include="ai.pkr.metagame.3, Version=3.0.7963.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>target\dist\bin\ai.pkr.metagame.3.dll</HintPath>
+    </Reference>
+    <Reference Include="ai.pkr.metastrategy.2, Version=2.0.8055.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>target\dist\bin\ai.pkr.metastrategy.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ai.pkr.metatools.2, Version=2.0.7963.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>target\dist\bin\ai.pkr.metatools.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ai.pkr.stdpoker.2, Version=2.0.7963.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>target\dist\bin\ai.pkr.stdpoker.2.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.7.10213, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>target\dist\bin\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net, Version=1.0.0.282, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>target\dist\bin\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algo.cs" />
+    <Compile Include="Bucket.cs" />
+    <Compile Include="HeRules.cs" />
+    <Compile Include="IRules.cs" />
+    <Compile Include="Kuhn6Cards.cs" />
+    <Compile Include="Kuhn8Cards.cs" />
+    <Compile Include="Kuhn8Rules.cs" />
+    <Compile Include="Kuhn8_Test.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="kuhn8.deck.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="kuhn8.gamedef.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bds", "bds", "{D2769115-6BD9-4B23-A025-0672DB6B182E}"
+	ProjectSection(SolutionItems) = preProject
+		src\main\assembly\assembly.xml = src\main\assembly\assembly.xml
+		src\test\resources\host-test.xml = src\test\resources\host-test.xml
+		pom.xml = pom.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.holdem.strategy.hand-value", "src\main\net\ai.pkr.holdem.strategy.hand-value\ai.pkr.holdem.strategy.hand-value.csproj", "{95D4581D-2CB6-4B6B-B044-952D7CB3249D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.holdem.strategy.hand-value.nunit", "src\test\net\ai.pkr.holdem.strategy.hand-value.nunit\ai.pkr.holdem.strategy.hand-value.nunit.csproj", "{AEAC9316-4591-4835-B6E4-E60B43BC7F7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.holdem.strategy.hand-value.lut-gen", "src\main\net\ai.pkr.holdem.strategy.hand-value.lut-gen\ai.pkr.holdem.strategy.hand-value.lut-gen.csproj", "{88A37696-788E-461C-9454-5D8736293885}"
+	ProjectSection(ProjectDependencies) = postProject
+		{95D4581D-2CB6-4B6B-B044-952D7CB3249D} = {95D4581D-2CB6-4B6B-B044-952D7CB3249D}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95D4581D-2CB6-4B6B-B044-952D7CB3249D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95D4581D-2CB6-4B6B-B044-952D7CB3249D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95D4581D-2CB6-4B6B-B044-952D7CB3249D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95D4581D-2CB6-4B6B-B044-952D7CB3249D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEAC9316-4591-4835-B6E4-E60B43BC7F7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEAC9316-4591-4835-B6E4-E60B43BC7F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEAC9316-4591-4835-B6E4-E60B43BC7F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEAC9316-4591-4835-B6E4-E60B43BC7F7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88A37696-788E-461C-9454-5D8736293885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88A37696-788E-461C-9454-5D8736293885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88A37696-788E-461C-9454-5D8736293885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88A37696-788E-461C-9454-5D8736293885}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

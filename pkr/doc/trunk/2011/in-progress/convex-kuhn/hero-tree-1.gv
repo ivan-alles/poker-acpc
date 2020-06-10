@@ -1,0 +1,65 @@
+digraph G {
+graph [labeljust="l" labelloc="t" fontsize="20" nodesep="0.05" fontname="arial" label="KunhPoker hero tree pos 1" ];
+node[fontsize="10" ];
+edge[arrowhead="none" fontsize="10" ];
+"n4"[label=<<FONT FACE = "ARIAL" POINT-SIZE="15">1 - h5</FONT>> fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n3" -> "n4"[label="1c" ];
+"n6"[label="" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n5" -> "n6"[label="0f" ];
+"n7"[label="" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n5" -> "n7"[label="0c" ];
+"n5"[label=<<FONT FACE = "ARIAL" POINT-SIZE="15">h5</FONT>> fillcolor="#FFD0D0" style="filled" shape="box" ];
+"n3" -> "n5"[label="1r1" ];
+"n3"[label="" fillcolor="#D0FFD0" style="filled" shape="box" ];
+"n2" -> "n3"[label="0c" ];
+"n9"[label=<<FONT FACE = "ARIAL" POINT-SIZE="15">1</FONT>> fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n8" -> "n9"[label="1f" ];
+"n10"[label=<<FONT FACE = "ARIAL" POINT-SIZE="15">0</FONT>> fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n8" -> "n10"[label="1c" ];
+"n8"[label="" fillcolor="#D0FFD0" style="filled" shape="box" ];
+"n2" -> "n8"[label="0r1" ];
+"n2"[label="" fillcolor="#FFD0D0" style="filled" shape="box" ];
+"n0" -> "n2"[label="0d{} 1d{J}" ];
+"n13"[label=<<FONT FACE = "ARIAL" POINT-SIZE="15">1</FONT>> fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n12" -> "n13"[label="1c" ];
+"n15"[label="" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n14" -> "n15"[label="0f" ];
+"n16"[label="" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n14" -> "n16"[label="0c" ];
+"n14"[label=<<FONT FACE = "ARIAL" POINT-SIZE="15">0</FONT>> fillcolor="#FFD0D0" style="filled" shape="box" ];
+"n12" -> "n14"[label="1r1" ];
+"n12"[label="" fillcolor="#D0FFD0" style="filled" shape="box" ];
+"n11" -> "n12"[label="0c" ];
+"n18"[label=<<FONT FACE = "ARIAL" POINT-SIZE="15">1 - h19</FONT>> fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n17" -> "n18"[label="1f" ];
+"n19"[label=<<FONT FACE = "ARIAL" POINT-SIZE="15">h19</FONT>> fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n17" -> "n19"[label="1c" ];
+"n17"[label="" fillcolor="#D0FFD0" style="filled" shape="box" ];
+"n11" -> "n17"[label="0r1" ];
+"n11"[label="" fillcolor="#FFD0D0" style="filled" shape="box" ];
+"n0" -> "n11"[label="0d{} 1d{Q}" ];
+"n22"[label=<<FONT FACE = "ARIAL" POINT-SIZE="15">0</FONT>> fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n21" -> "n22"[label="1c" ];
+"n24"[label="" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n23" -> "n24"[label="0f" ];
+"n25"[label="" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n23" -> "n25"[label="0c" ];
+"n23"[label=<<FONT FACE = "ARIAL" POINT-SIZE="15">1</FONT>> fillcolor="#FFD0D0" style="filled" shape="box" ];
+"n21" -> "n23"[label="1r1" ];
+"n21"[label="" fillcolor="#D0FFD0" style="filled" shape="box" ];
+"n20" -> "n21"[label="0c" ];
+"n27"[label=<<FONT FACE = "ARIAL" POINT-SIZE="15">0</FONT>> fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n26" -> "n27"[label="1f" ];
+"n28"[label=<<FONT FACE = "ARIAL" POINT-SIZE="15">1</FONT>> fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n26" -> "n28"[label="1c" ];
+"n26"[label="" fillcolor="#D0FFD0" style="filled" shape="box" ];
+"n20" -> "n26"[label="0r1" ];
+"n20"[label="" fillcolor="#FFD0D0" style="filled" shape="box" ];
+"n0" -> "n20"[label="0d{} 1d{K}" ];
+{rank=same; round0;
+"n0"[label="" fillcolor="#FFFFFF" style="filled, dotted" shape="ellipse" ];
+}
+{
+"round0"[fontsize="22" style="bold" peripheries="0" label="Round 0" ];
+}
+}

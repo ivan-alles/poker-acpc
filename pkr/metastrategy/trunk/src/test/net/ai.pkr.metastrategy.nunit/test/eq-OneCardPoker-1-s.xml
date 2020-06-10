@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<p p="2" a="0" probab="1">
+ <p p="0" a="1" probab="0">
+  <p p="1" a="1" probab="0">
+   <d p="0" c="2">
+    <p p="0" a="0" probab="0">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="1">
+      <p p="0" a="0" probab="0" />
+      <p p="0" a="1" probab="0" />
+     </p>
+    </p>
+    <p p="0" a="1" probab="0">
+     <p p="1" a="0" probab="1" />
+     <p p="1" a="1" probab="0" />
+    </p>
+   </d>
+   <d p="0" c="3">
+    <p p="0" a="0" probab="0">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="0.999999999999999">
+      <p p="0" a="0" probab="0" />
+      <p p="0" a="1" probab="0" />
+     </p>
+    </p>
+    <p p="0" a="1" probab="0">
+     <p p="1" a="0" probab="1" />
+     <p p="1" a="1" probab="0" />
+    </p>
+   </d>
+   <d p="0" c="4">
+    <p p="0" a="0" probab="0">
+     <p p="1" a="0" probab="1" />
+     <p p="1" a="1" probab="0">
+      <p p="0" a="0" probab="0" />
+      <p p="0" a="1" probab="0" />
+     </p>
+    </p>
+    <p p="0" a="1" probab="0">
+     <p p="1" a="0" probab="1" />
+     <p p="1" a="1" probab="0" />
+    </p>
+   </d>
+   <d p="0" c="5">
+    <p p="0" a="0" probab="0">
+     <p p="1" a="0" probab="1" />
+     <p p="1" a="1" probab="0">
+      <p p="0" a="0" probab="0" />
+      <p p="0" a="1" probab="0" />
+     </p>
+    </p>
+    <p p="0" a="1" probab="0">
+     <p p="1" a="0" probab="0.749999999999913" />
+     <p p="1" a="1" probab="0.250000000000087" />
+    </p>
+   </d>
+   <d p="0" c="6">
+    <p p="0" a="0" probab="0">
+     <p p="1" a="0" probab="1" />
+     <p p="1" a="1" probab="0">
+      <p p="0" a="0" probab="0" />
+      <p p="0" a="1" probab="0" />
+     </p>
+    </p>
+    <p p="0" a="1" probab="0">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="1" />
+    </p>
+   </d>
+   <d p="0" c="7">
+    <p p="0" a="0" probab="0">
+     <p p="1" a="0" probab="1" />
+     <p p="1" a="1" probab="0">
+      <p p="0" a="0" probab="0" />
+      <p p="0" a="1" probab="0" />
+     </p>
+    </p>
+    <p p="0" a="1" probab="0">
+     <p p="1" a="0" probab="1" />
+     <p p="1" a="1" probab="0" />
+    </p>
+   </d>
+   <d p="0" c="8">
+    <p p="0" a="0" probab="0">
+     <p p="1" a="0" probab="0.999999999999999" />
+     <p p="1" a="1" probab="0">
+      <p p="0" a="0" probab="0" />
+      <p p="0" a="1" probab="0" />
+     </p>
+    </p>
+    <p p="0" a="1" probab="0">
+     <p p="1" a="0" probab="0.25000000000054" />
+     <p p="1" a="1" probab="0.74999999999946" />
+    </p>
+   </d>
+   <d p="0" c="9">
+    <p p="0" a="0" probab="0">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="1">
+      <p p="0" a="0" probab="0" />
+      <p p="0" a="1" probab="0" />
+     </p>
+    </p>
+    <p p="0" a="1" probab="0">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="1" />
+    </p>
+   </d>
+   <d p="0" c="T">
+    <p p="0" a="0" probab="0">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="1">
+      <p p="0" a="0" probab="0" />
+      <p p="0" a="1" probab="0" />
+     </p>
+    </p>
+    <p p="0" a="1" probab="0">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="1" />
+    </p>
+   </d>
+   <d p="0" c="J">
+    <p p="0" a="0" probab="0">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="1">
+      <p p="0" a="0" probab="0" />
+      <p p="0" a="1" probab="0" />
+     </p>
+    </p>
+    <p p="0" a="1" probab="0">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="1" />
+    </p>
+   </d>
+   <d p="0" c="Q">
+    <p p="0" a="0" probab="0">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="1">
+      <p p="0" a="0" probab="0" />
+      <p p="0" a="1" probab="0" />
+     </p>
+    </p>
+    <p p="0" a="1" probab="0">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="1" />
+    </p>
+   </d>
+   <d p="0" c="K">
+    <p p="0" a="0" probab="0">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="1">
+      <p p="0" a="0" probab="0" />
+      <p p="0" a="1" probab="0" />
+     </p>
+    </p>
+    <p p="0" a="1" probab="0">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="1" />
+    </p>
+   </d>
+   <d p="0" c="A">
+    <p p="0" a="0" probab="0">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="1">
+      <p p="0" a="0" probab="0" />
+      <p p="0" a="1" probab="0" />
+     </p>
+    </p>
+    <p p="0" a="1" probab="0">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="1" />
+    </p>
+   </d>
+  </p>
+ </p>
+</p>

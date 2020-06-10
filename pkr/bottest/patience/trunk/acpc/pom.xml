@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- This project should install all necessary artifacts to the bottest directory 
+         run mvn validate.
+         
+         Try this out as an alternative method to BDS installation.
+    -->
+    <groupId>ai.pkr.bottest</groupId>
+    <artifactId>patience</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Package ai.pkr.bottest:patience</name>
+
+    <!-- This is used to get and unpack dependencies -->
+    <parent>
+        <groupId>ai.bds</groupId>
+        <artifactId>pom-net</artifactId>
+        <version>1.1.0-SNAPSHOT</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>ai.bds</groupId>
+            <artifactId>tools</artifactId>
+            <version>[1.*,2.0.0)</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>ai.pkr</groupId>
+            <artifactId>metastrategy</artifactId>
+            <version>[2.*,3.0.0)</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>ai.pkr.holdem.strategy</groupId>
+            <artifactId>ca</artifactId>
+            <version>[1.*,2.0.0)</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>ai.pkr.bots</groupId>
+            <artifactId>patience</artifactId>
+            <version>[2.*,3.0.0)</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>ai.pkr</groupId>
+            <artifactId>acpc</artifactId>
+            <version>[2.*,3.0.0)</version>
+            <type>zip</type>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+        </plugins>
+    </build>
+</project>
+

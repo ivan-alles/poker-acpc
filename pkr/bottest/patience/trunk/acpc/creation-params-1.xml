@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Props XmlMergeWithGlobal = "true">
+   <p n="StrategyDir" v="${env.BOTTEST_ROOT}configs/acpc"/>
+   <p n="RngSeed" v="1"/>	
+   <p n="RelProbabIgnoreLevel" v="0.005"/>
+</Props>

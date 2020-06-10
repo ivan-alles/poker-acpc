@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "open_cfr_train", "open_cfr_train.vcproj", "{28F3E93D-83B3-4D1E-9DD5-1CED9AF2FB0C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sln", "sln", "{B9F91C47-6934-4860-AEC5-BC5CB860B161}"
+	ProjectSection(SolutionItems) = preProject
+		ai.readme.txt = ai.readme.txt
+		Makefile = Makefile
+		README = README
+		run.bat = run.bat
+		run.sh = run.sh
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "open_cfr_play", "open_cfr_play.vcproj", "{F4F580F7-56EF-42E8-92E4-E24686C8B938}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "open_cfr_best_response", "open_cfr_best_response.vcproj", "{90DA4A59-D94D-429D-A5BC-20E0D7F9D92B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "abstractions", "abstractions", "{9D7D4317-243F-4CD4-BE09-8BFC0C9BED0A}"
+	ProjectSection(SolutionItems) = preProject
+		abstractions\fullgame = abstractions\fullgame
+		abstractions\J.Q.K.pair.nopair = abstractions\J.Q.K.pair.nopair
+		abstractions\J.QK.pair.nopair = abstractions\J.QK.pair.nopair
+		abstractions\JQ.K.pair.nopair = abstractions\JQ.K.pair.nopair
+		abstractions\JQK.pair.nopair = abstractions\JQK.pair.nopair
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28F3E93D-83B3-4D1E-9DD5-1CED9AF2FB0C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{28F3E93D-83B3-4D1E-9DD5-1CED9AF2FB0C}.Debug|Win32.Build.0 = Debug|Win32
+		{28F3E93D-83B3-4D1E-9DD5-1CED9AF2FB0C}.Release|Win32.ActiveCfg = Release|Win32
+		{28F3E93D-83B3-4D1E-9DD5-1CED9AF2FB0C}.Release|Win32.Build.0 = Release|Win32
+		{F4F580F7-56EF-42E8-92E4-E24686C8B938}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F4F580F7-56EF-42E8-92E4-E24686C8B938}.Debug|Win32.Build.0 = Debug|Win32
+		{F4F580F7-56EF-42E8-92E4-E24686C8B938}.Release|Win32.ActiveCfg = Release|Win32
+		{F4F580F7-56EF-42E8-92E4-E24686C8B938}.Release|Win32.Build.0 = Release|Win32
+		{90DA4A59-D94D-429D-A5BC-20E0D7F9D92B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{90DA4A59-D94D-429D-A5BC-20E0D7F9D92B}.Debug|Win32.Build.0 = Debug|Win32
+		{90DA4A59-D94D-429D-A5BC-20E0D7F9D92B}.Release|Win32.ActiveCfg = Release|Win32
+		{90DA4A59-D94D-429D-A5BC-20E0D7F9D92B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="ai.pkr.metagame.GameDefinition.xsd"
+           xmlns="ai.pkr.metagame.GameDefinition.xsd"  
+           >
+    <!-- Types -->
+    <xs:complexType name="Property">
+        <xs:attribute type="xs:string" name="n"/>
+        <xs:attribute type="xs:string" name="v"/>
+    </xs:complexType>
+    <xs:complexType name="Props">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="p"  type="Property" />
+        </xs:sequence>
+    </xs:complexType>    
+    <xs:complexType name="ArrayOfDouble">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="i" type="xs:double" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ArrayOfInt">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="i" type="xs:int" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="LimitKind">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="FixedLimit" />
+            <xs:enumeration value="PotLimit" />
+            <xs:enumeration value="NoLimit" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="GameDefinition">
+        <xs:all>
+            <xs:element minOccurs="1" maxOccurs="1" name="Name" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="RoundsCount" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="MinPlayers" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="MaxPlayers" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="1" name="BetStructure" type="ArrayOfDouble" />
+            <xs:element minOccurs="1" maxOccurs="1" name="BlindStructure" type="ArrayOfDouble" />
+            <xs:element minOccurs="1" maxOccurs="1" name="PrivateCardsCount" type="ArrayOfInt" />
+            <xs:element minOccurs="1" maxOccurs="1" name="PublicCardsCount" type="ArrayOfInt" />
+            <xs:element minOccurs="1" maxOccurs="1" name="SharedCardsCount" type="ArrayOfInt" />
+            <xs:element minOccurs="1" maxOccurs="1" name="BetsCountLimits" type="ArrayOfInt" />
+            <xs:element minOccurs="1" maxOccurs="1" name="FirstActor" type="ArrayOfInt" />
+            <xs:element minOccurs="1" maxOccurs="1" name="FirstActorHeadsUp" type="ArrayOfInt" />
+            <xs:element minOccurs="1" maxOccurs="1" name="LimitKind" type="LimitKind" />
+            <xs:element minOccurs="1" maxOccurs="1" name="DeckDescrFile" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="GameRulesAssemblyFile" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="GameRulesType" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="GameRulesCreationParams" type="Props" />
+        </xs:all>
+    </xs:complexType>
+    <!-- Elements -->
+    <xs:element name="GameDefinition" type="GameDefinition" />
+</xs:schema>

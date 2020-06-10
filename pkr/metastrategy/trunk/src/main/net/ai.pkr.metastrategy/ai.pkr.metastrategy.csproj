@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{297F397B-167E-4ECE-824D-9D5518ED79FA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ai.pkr.metastrategy</RootNamespace>
+    <AssemblyName>ai.pkr.metastrategy</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\target\dist\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1607 1591 1573 1712 419</NoWarn>
+    <DocumentationFile>..\..\..\..\target\dist\Debug\ai.pkr.metastrategy.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\target\dist\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1607 1591 1573 1712 419</NoWarn>
+    <DocumentationFile>..\..\..\..\target\dist\Release\ai.pkr.metastrategy.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ai.lib.algorithms, Version=2.0.2174.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\target\dist\bin\ai.lib.algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="ai.lib.utils, Version=2.0.2133.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\target\dist\bin\ai.lib.utils.dll</HintPath>
+    </Reference>
+    <Reference Include="ai.pkr.metagame, Version=2.0.2280.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\target\dist\bin\ai.pkr.metagame.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Iridium, Version=2008.8.16.470, Culture=neutral, PublicKeyToken=c061a3ec32cc0c6f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\target\dist\bin\MathNet.Iridium.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\target\generated\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="algorithms\AnalyzeChanceTree.cs" />
+    <Compile Include="ActivePlayers.cs" />
+    <Compile Include="algorithms\AnalyzeStrategyTree.cs" />
+    <Compile Include="algorithms\Br.cs" />
+    <Compile Include="algorithms\CompareStrategyTrees.cs" />
+    <Compile Include="algorithms\ConvertCondToAbs.cs" />
+    <Compile Include="algorithms\CreateChanceTreeByAbstraction.cs" />
+    <Compile Include="algorithms\CompareChanceTrees.cs" />
+    <Compile Include="algorithms\DumpChanceTree.cs" />
+    <Compile Include="algorithms\EqLp.cs" />
+    <Compile Include="algorithms\McDealer.cs" />
+    <Compile Include="algorithms\MergeStrategies.cs" />
+    <Compile Include="algorithms\DumpStrategyTree.cs" />
+    <Compile Include="algorithms\VerifyEq.cs" />
+    <Compile Include="algorithms\XmlToActionTree.cs" />
+    <Compile Include="ChanceAbstractionHelper.cs" />
+    <Compile Include="IChanceAbstraction.cs" />
+    <Compile Include="algorithms\GameValue.cs" />
+    <Compile Include="algorithms\StrategyTreeToXml.cs" />
+    <Compile Include="algorithms\VerifyAbsStrategy.cs" />
+    <Compile Include="model-games\KuhnChanceAbstraction.cs" />
+    <Compile Include="model-games\LeducHeChanceAbstraction.cs" />
+    <Compile Include="algorithms\CreateActionTreeByGameDef.cs" />
+    <Compile Include="algorithms\CreateChanceTreeByGameDef.cs" />
+    <Compile Include="algorithms\CreateStrategyTreeByChanceAndActionTrees.cs" />
+    <Compile Include="algorithms\ExtractPlayerChanceTree.cs" />
+    <Compile Include="algorithms\VerifyChanceTree.cs" />
+    <Compile Include="algorithms\WalkChanceAndActionTrees.cs" />
+    <Compile Include="model-games\MicroFlRules.cs" />
+    <Compile Include="model-games\MiniFlRules.cs" />
+    <Compile Include="IActionTreeNode.cs" />
+    <Compile Include="IChanceTreeNode.cs" />
+    <Compile Include="IDealerAction.cs" />
+    <Compile Include="IPlayerAction.cs" />
+    <Compile Include="IStrategicAction.cs" />
+    <Compile Include="IStrategyTreeNode.cs" />
+    <Compile Include="NamespaceDoc.cs" />
+    <Compile Include="algorithms\CardEnum.cs" />
+    <Compile Include="model-games\KuhnRules.cs" />
+    <Compile Include="model-games\LeducHeRules.cs" />
+    <Compile Include="lpsolve\lpsolve55.cs" />
+    <Compile Include="algorithms\NormSuit.cs" />
+    <Compile Include="algorithms\NormRank.cs" />
+    <Compile Include="model-games\OcpRules.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StrategicState.cs" />
+    <Compile Include="ActionTree.cs" />
+    <Compile Include="ActionTreeNode.cs" />
+    <Compile Include="ChanceTree.cs" />
+    <Compile Include="ChanceTreeNode.cs" />
+    <Compile Include="StrategicString.cs" />
+    <Compile Include="StrategyTree.cs" />
+    <Compile Include="StrategyTreeNode.cs" />
+    <Compile Include="TrivialChanceAbstraction.cs" />
+    <Compile Include="vis\VisActionTree.cs" />
+    <Compile Include="vis\VisChanceTree.cs" />
+    <Compile Include="algorithms\VerifyCondStrategy.cs" />
+    <Compile Include="vis\VisPkrTree.cs" />
+    <Compile Include="vis\VisStrategyTree.cs" />
+    <Compile Include="algorithms\XmlToStrategyTree.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\kuhn.deck.xml" />
+    <Content Include="data\kuhn.gamedef.xml" />
+    <Content Include="data\kuhn2.gamedef.xml" />
+    <Content Include="data\leduc-he-rb.gamedef.xml" />
+    <Content Include="data\leduc-he-suited.deck.xml" />
+    <Content Include="data\leduc-he-suited.gamedef.xml" />
+    <Content Include="data\leduc-he.deck.xml" />
+    <Content Include="data\leduc-he.gamedef.xml" />
+    <Content Include="data\micro-fl.deck.xml" />
+    <Content Include="data\micro-fl.gamedef.xml" />
+    <Content Include="data\mini-fl.deck.xml" />
+    <Content Include="data\mini-fl.gamedef.xml" />
+    <Content Include="data\ocp.deck.xml" />
+    <Content Include="data\ocp.gamedef.xml" />
+    <Content Include="data\ocp2.gamedef.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="doc\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ZerocIce_HomeExpanded="C:\Programme\ZeroC\Ice-3.4.1" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>xcopy /E /I /S /Y $(ProjectDir)data $(SolutionDir)\target\dist\data\$(TargetName) &gt;nul
+xcopy /E /I /S /Y $(ProjectDir)doc $(SolutionDir)\target\dist\doc\$(TargetName) &gt;nul</PreBuildEvent>
+  </PropertyGroup>
+</Project>

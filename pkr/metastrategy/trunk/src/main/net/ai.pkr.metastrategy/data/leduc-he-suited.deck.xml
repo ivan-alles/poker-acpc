@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeckDescriptor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="ai.pkr.metagame.DeckDescriptor.xsd">
+    <Name>LeducHeSuitedDeck</Name>
+    <CardNames>
+        <i>Jc</i>
+        <i>Qc</i>
+        <i>Kc</i>
+        <i>Jd</i>
+        <i>Qd</i>
+        <i>Kd</i>
+    </CardNames>
+    <CardSets>
+        <i>400</i>
+        <i>800</i>
+        <i>1000</i>
+        <i>4000000</i>
+        <i>8000000</i>
+        <i>10000000</i>
+    </CardSets>
+</DeckDescriptor>
+

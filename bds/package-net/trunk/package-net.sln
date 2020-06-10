@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{5254A447-A8C8-4A02-9D0C-132BA0E58BFC}"
+	ProjectSection(SolutionItems) = preProject
+		pom.xml = pom.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source", "source", "{9F9A48F8-7455-4B12-AFE7-E998325BD3DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "main", "main", "{38668A14-2FCA-433E-BD75-C85F0C4EA006}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resources", "resources", "{9A88E989-0AB1-48F7-82ED-E150014AE4F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "archetype-resources", "archetype-resources", "{E874F151-084D-47D7-98CE-8DD181DFE151}"
+	ProjectSection(SolutionItems) = preProject
+		src\main\resources\archetype-resources\pom.xml = src\main\resources\archetype-resources\pom.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "META-INF", "META-INF", "{BA770FE6-C1C7-4FDB-8DDF-4560984D50B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "maven", "maven", "{C168ECAF-26B7-43CE-BA4D-2ABE424D155A}"
+	ProjectSection(SolutionItems) = preProject
+		src\main\resources\META-INF\maven\archetype.xml = src\main\resources\META-INF\maven\archetype.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4018BC0C-7D7B-422C-A21C-921BED2B82EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "main", "main", "{3AA2E390-0710-4D06-9F7C-0E978BA8F10A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assembly", "assembly", "{5D5786C7-199A-4AB9-A64B-B944AF7CDF6E}"
+	ProjectSection(SolutionItems) = preProject
+		src\main\resources\archetype-resources\src\main\assembly\assembly.xml = src\main\resources\archetype-resources\src\main\assembly\assembly.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A845C756-67AD-4077-BA09-28DA0DD26782}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resources", "resources", "{5E0034DF-6FFF-4033-8A2E-9BEB30247932}"
+	ProjectSection(SolutionItems) = preProject
+		src\main\resources\archetype-resources\src\test\resources\host-test.xml = src\main\resources\archetype-resources\src\test\resources\host-test.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9F9A48F8-7455-4B12-AFE7-E998325BD3DE} = {5254A447-A8C8-4A02-9D0C-132BA0E58BFC}
+		{38668A14-2FCA-433E-BD75-C85F0C4EA006} = {9F9A48F8-7455-4B12-AFE7-E998325BD3DE}
+		{9A88E989-0AB1-48F7-82ED-E150014AE4F5} = {38668A14-2FCA-433E-BD75-C85F0C4EA006}
+		{E874F151-084D-47D7-98CE-8DD181DFE151} = {9A88E989-0AB1-48F7-82ED-E150014AE4F5}
+		{BA770FE6-C1C7-4FDB-8DDF-4560984D50B6} = {9A88E989-0AB1-48F7-82ED-E150014AE4F5}
+		{4018BC0C-7D7B-422C-A21C-921BED2B82EC} = {E874F151-084D-47D7-98CE-8DD181DFE151}
+		{C168ECAF-26B7-43CE-BA4D-2ABE424D155A} = {BA770FE6-C1C7-4FDB-8DDF-4560984D50B6}
+		{3AA2E390-0710-4D06-9F7C-0E978BA8F10A} = {4018BC0C-7D7B-422C-A21C-921BED2B82EC}
+		{A845C756-67AD-4077-BA09-28DA0DD26782} = {4018BC0C-7D7B-422C-A21C-921BED2B82EC}
+		{5D5786C7-199A-4AB9-A64B-B944AF7CDF6E} = {3AA2E390-0710-4D06-9F7C-0E978BA8F10A}
+		{5E0034DF-6FFF-4033-8A2E-9BEB30247932} = {A845C756-67AD-4077-BA09-28DA0DD26782}
+	EndGlobalSection
+EndGlobal

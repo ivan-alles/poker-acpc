@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<p p="2" a="0" probab="1">
+ <p p="0" a="1" probab="0">
+  <p p="1" a="1" probab="0">
+   <d p="0" c="J">
+    <p p="0" a="0" probab="0.666666666666667">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="0">
+      <p p="0" a="0" probab="0.666666666666667" />
+      <p p="0" a="1" probab="0" />
+     </p>
+    </p>
+    <p p="0" a="1" probab="0.333333333333333">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="0" />
+    </p>
+   </d>
+   <d p="0" c="Q">
+    <p p="0" a="0" probab="1">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="0">
+      <p p="0" a="0" probab="0.333333333333395" />
+      <p p="0" a="1" probab="0.666666666666605" />
+     </p>
+    </p>
+    <p p="0" a="1" probab="0">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="0" />
+    </p>
+   </d>
+   <d p="0" c="K">
+    <p p="0" a="0" probab="0">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="0">
+      <p p="0" a="0" probab="0" />
+      <p p="0" a="1" probab="0" />
+     </p>
+    </p>
+    <p p="0" a="1" probab="1">
+     <p p="1" a="0" probab="0" />
+     <p p="1" a="1" probab="0" />
+    </p>
+   </d>
+  </p>
+ </p>
+</p>

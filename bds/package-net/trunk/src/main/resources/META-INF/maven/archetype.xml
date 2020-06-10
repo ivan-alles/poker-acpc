@@ -1,0 +1,19 @@
+<archetype>
+    <id>package-net</id>
+    <!--<sources>
+    <source></source>
+  </sources>-->
+    <resources>
+        <resource>src/main/assembly/assembly.xml</resource>
+        <resource>package.sln</resource>
+        <resource>code-coverage.bat</resource>
+        <resource>readme.txt</resource>
+    </resources>
+    <testResources>
+        <resource>src/test/resources/host-test.xml</resource>
+    </testResources>
+    <!--
+  <testSources>
+    <source>src/test/java/AppTest.java</source>
+  </testSources> -->
+</archetype>

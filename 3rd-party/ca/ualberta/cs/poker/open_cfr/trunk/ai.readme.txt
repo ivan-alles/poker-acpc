@@ -1,0 +1,5 @@
+This is an open_cfg for Leduc poker. Originally taken from http://poker.cs.ualberta.ca/open_cfr.html.
+
+It allows to build a close to equilibrium strategy and find a best response to it.
+
+Build the project and run run.sh for a quick start.

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SessionSuiteCfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="ai.pkr.metabots.SessionSuiteCfg.xsd">
+    <!-- Contains simple ring game sessions. -->
+    <Name>demo-sessions</Name>
+    <LocalPlayers>
+        <LocalPlayerCfg>
+            <Name>RaiserBot1</Name>
+            <Assembly></Assembly>
+            <Type>ai.pkr.metabots.bots.RaiserBot</Type>
+            <CreationParameters>
+                <p n="p1" v="v1"/>
+            </CreationParameters>
+        </LocalPlayerCfg>
+        <LocalPlayerCfg>
+            <Name>RandomBot1</Name>
+            <Type>ai.pkr.metabots.bots.RandomBot</Type>
+        </LocalPlayerCfg>
+    </LocalPlayers>
+    <Sessions>
+        <SessionCfg>
+            <Name>Ring Game 1</Name>
+            <GameDefinitionFile>${loc.xml.Dir}gamedef-demo.xml</GameDefinitionFile>
+            <Kind>RingGame</Kind>
+            <GamesCount>10000</GamesCount>
+            <Players>
+                <PlayerSessionCfg>
+                    <Name>RaiserBot1</Name>
+                    <SessionParameters></SessionParameters>
+                </PlayerSessionCfg>
+                <PlayerSessionCfg>
+                    <Name>RandomBot1</Name>
+                </PlayerSessionCfg>
+        </Players>
+        </SessionCfg>
+        <SessionCfg>
+            <Name>Ring Game 2</Name>
+            <Kind>RingGame</Kind>
+            <GameDefinitionFile>${loc.xml.Dir}gamedef-demo.xml</GameDefinitionFile>
+            <GamesCount>10000</GamesCount>
+            <Players>
+                <PlayerSessionCfg>
+                    <Name>RaiserBot1</Name>
+                </PlayerSessionCfg>
+                <PlayerSessionCfg>
+                    <Name>RandomBot1</Name>
+                </PlayerSessionCfg>
+            </Players>
+        </SessionCfg>
+    </Sessions>
+</SessionSuiteCfg>

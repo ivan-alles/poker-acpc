@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SessionSuiteCfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="ai.pkr.metabots.SessionSuiteCfg.xsd">
+    <Name>cfo2-probing</Name>
+    <LocalPlayers>
+        <LocalPlayerCfg>
+            <Name>Probe</Name>
+            <Assembly></Assembly>
+            <Type>ai.pkr.metabots.bots.ProbeBot</Type>
+        </LocalPlayerCfg>
+    </LocalPlayers>
+    <Sessions>
+        <SessionCfg>
+            <Name>Ring Game 1</Name>
+            <RngSeed>0</RngSeed>
+            <GameDefinitionFile>${env.AI_HOME}\data\ai.pkr.holdem.gd.fl.2.1.xml</GameDefinitionFile>
+            <Kind>RingGame</Kind>
+            <GamesCount>1000000</GamesCount>
+            <Players>
+                <PlayerSessionCfg>
+                    <Name>Probe</Name>
+                </PlayerSessionCfg>                
+                <PlayerSessionCfg>
+                    <Name>Fo2</Name>
+                    <SessionParameters></SessionParameters>
+                </PlayerSessionCfg>
+            </Players>
+        </SessionCfg>
+    </Sessions>
+</SessionSuiteCfg>

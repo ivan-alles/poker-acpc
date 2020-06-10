@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                xmlns="ai.pkr.metagame.GameDefinition.xsd"
+                >
+    <!--
+One-card poker. See: http://www.cs.cmu.edu/~ggordon/poker/.
+
+Here are the rules of the game: you and the computer each get one card and ante $1.
+You bet first, either $0 or $1. Then the computer gets a chance to match you 
+(if you bet $1) or raise you (if you bet $0).  If you bet $0 and the computer raised you,
+you get a chance to call.  Betting $0 when your opponent has already bet $1 means 
+you fold and lose your ante.  If no one folds before the end of betting,
+the higher card wins the pot; that results in a net gain of either $1 or $2,
+equal to the other player's ante plus the bet of $0 or $1.
+
+If you play optimally, you should be able to keep your losses down to about 6.4 
+cents per deal on average.  To limit your performance to this level, 
+the computerized second player plays according to the betting tables below. 
+By contrast, if the computer decided whether to bet by flipping a coin without 
+looking at its card, you could win up to 50 cents per deal on average.  
+These tables were computed in Matlab by solving a small linear program 
+generated from the sequence form of the game tree.  (Get the source.)  
+The tables are not unique; the answer we compute depends on the details 
+of the linear programming solver we use.
+
+Here is the betting table for player 2. To use it, look up player 2's card in the column headers.  
+Then choose a row according to whether player 1 bet or passed.  The corresponding entry says 
+how often to bet: for example, 0.632 means bet 63.2% of the time.
+
+Holding:       2    3     4     5     6     7     8     9     T     J     Q     K     A
+On pass:  1.000 1.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 1.000 1.000 1.000 1.000
+On bet:   0.000 0.000 0.000 0.251 0.408 0.583 0.759 1.000 1.000 1.000 1.000 1.000 1.000
+
+In case you're interested, here is the analogous betting table for player 1.  You can play 
+optimally using just this table and a 1000-sided die.  The first row says how often to bet 
+in the first round; the second row says how often to bet if you passed in the first round 
+and the computer raised to $1.
+
+Holding:       2     3     4     5     6     7     8     9     T     J     Q     K     A
+1st round: 0.454 0.443 0.254 0.000 0.000 0.000 0.000 0.422 0.549 0.598 0.615 0.628 0.641
+2nd round: 0.000 0.000 0.169 0.269 0.429 0.610 0.760 1.000 1.000 1.000 1.000 1.000 1.000
+
+-->
+    <Name>OneCardPoker</Name>
+    <LimitKind>FixedLimit</LimitKind>
+    <MinPlayers>2</MinPlayers>
+    <MaxPlayers>2</MaxPlayers>
+    <BlindStructure>
+        <i>1</i>
+        <i>1</i>
+    </BlindStructure>
+    <BetStructure>
+        <i>1</i>
+    </BetStructure>
+    <RoundsCount>1</RoundsCount>
+    <FirstActor>
+        <i>0</i>
+    </FirstActor>
+    <FirstActorHeadsUp>
+        <i>0</i>
+    </FirstActorHeadsUp>
+    <BetsCountLimits>
+        <i>2</i>
+    </BetsCountLimits>
+    <PrivateCardsCount>
+        <i>1</i>
+    </PrivateCardsCount>
+    <PublicCardsCount>
+        <i>0</i>
+    </PublicCardsCount>
+    <SharedCardsCount>
+        <i>0</i>
+    </SharedCardsCount>
+    <DeckDescrFile>${bds.DataDir}/ai.pkr.metastrategy/ocp.deck.xml</DeckDescrFile>
+    <GameRulesAssemblyFile></GameRulesAssemblyFile>
+    <GameRulesType>ai.pkr.metastrategy.model_games.OcpRules,ai.pkr.metastrategy</GameRulesType>
+    <GameRulesCreationParams></GameRulesCreationParams>
+</GameDefinition>

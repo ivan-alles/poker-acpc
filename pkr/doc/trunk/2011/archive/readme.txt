@@ -1,0 +1,1 @@
+This folder is for files that are not necessary now but are worth keeping because (who knows) they will be useful in future.

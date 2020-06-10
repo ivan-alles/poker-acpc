@@ -1,0 +1,1 @@
+pkrloginfo -report-class:%AI_HOME%\bin\ai.pkr.holdem.strategy.1.dll;ai.pkr.holdem.strategy.PocketReport %*

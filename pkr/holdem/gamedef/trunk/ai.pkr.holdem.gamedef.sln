@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".solution", ".solution", "{18015666-C5BF-4103-92FD-56F5022ADF74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bds", "bds", "{E34F894C-547C-408E-9D59-85CAE4F9F0C3}"
+	ProjectSection(SolutionItems) = preProject
+		src\main\assembly\assembly.xml = src\main\assembly\assembly.xml
+		code-coverage.bat = code-coverage.bat
+		src\test\resources\host-test.xml = src\test\resources\host-test.xml
+		pom.xml = pom.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.holdem.gamedef.nunit", "src\test\net\ai.pkr.holdem.gamedef.nunit\ai.pkr.holdem.gamedef.nunit.csproj", "{FC2C37FD-69FD-4E24-9D38-225DE8D584DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.holdem.gamedef", "src\main\net\ai.pkr.holdem.gamedef\ai.pkr.holdem.gamedef.csproj", "{6FC2995A-43BC-4B39-A2B0-17AD4C079A5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC2C37FD-69FD-4E24-9D38-225DE8D584DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC2C37FD-69FD-4E24-9D38-225DE8D584DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC2C37FD-69FD-4E24-9D38-225DE8D584DE}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{FC2C37FD-69FD-4E24-9D38-225DE8D584DE}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{FC2C37FD-69FD-4E24-9D38-225DE8D584DE}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{FC2C37FD-69FD-4E24-9D38-225DE8D584DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC2C37FD-69FD-4E24-9D38-225DE8D584DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC2C37FD-69FD-4E24-9D38-225DE8D584DE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{FC2C37FD-69FD-4E24-9D38-225DE8D584DE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{FC2C37FD-69FD-4E24-9D38-225DE8D584DE}.Release|Win32.ActiveCfg = Release|Any CPU
+		{6FC2995A-43BC-4B39-A2B0-17AD4C079A5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FC2995A-43BC-4B39-A2B0-17AD4C079A5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FC2995A-43BC-4B39-A2B0-17AD4C079A5E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6FC2995A-43BC-4B39-A2B0-17AD4C079A5E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6FC2995A-43BC-4B39-A2B0-17AD4C079A5E}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{6FC2995A-43BC-4B39-A2B0-17AD4C079A5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FC2995A-43BC-4B39-A2B0-17AD4C079A5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FC2995A-43BC-4B39-A2B0-17AD4C079A5E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6FC2995A-43BC-4B39-A2B0-17AD4C079A5E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6FC2995A-43BC-4B39-A2B0-17AD4C079A5E}.Release|Win32.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

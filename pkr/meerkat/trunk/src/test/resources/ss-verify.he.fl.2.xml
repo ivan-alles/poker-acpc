@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SessionSuiteCfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="ai.pkr.metabots.SessionSuiteCfg.xsd">
+    <Name>meerkat-ver</Name>
+    <Sessions>
+        <SessionCfg>
+            <Name>Ring Game 1</Name>
+            <GameDefinitionFile>gd.he.fl.2.xml</GameDefinitionFile>
+            <Kind>RingGame</Kind>
+            <GamesCount>999999</GamesCount>
+            <ReplayFrom>pa.mv.he.fe.2.log</ReplayFrom>
+            <Players>
+                <PlayerSessionCfg>
+                    <Name>Mvb1</Name>
+                </PlayerSessionCfg>
+                <PlayerSessionCfg>
+                    <Name>Mvb2</Name>
+                </PlayerSessionCfg>
+        </Players>
+        </SessionCfg>
+    </Sessions>
+</SessionSuiteCfg>

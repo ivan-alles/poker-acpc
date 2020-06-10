@@ -1,0 +1,176 @@
+package com.ibot;
+
+import poker.*;
+import poker.ai.HandPotential;
+import poker.util.*;
+import java.io.*;
+
+
+// This prints a distribution of raw look ahead hand strength vs. PPot
+
+
+public class ActionGenerator
+{
+	public static void main(String[] args)
+	{
+		// definitions
+		Deck d = new Deck();
+		HandEvaluator he = new HandEvaluator();
+		HandPotential pot = new HandPotential();
+		double p, n, rollstr, turnp, turnn, turnrollstr,rivrank; //PPOT and NPOT and roll out hand str
+		boolean full = true; //true if two card look ahead
+		Hand hnd = new Hand(); //board
+		Card c1 = new Card(0,0);
+		Card c2 = new Card(0,0); //hole cards
+		Card c3 = new Card(0,0); //hole cards
+		int index;
+		double rank=0.0, turnrank=0.0; //and non rollout handstr, size of sample (number of hands we are going to try)
+	
+		//set up deck
+	    d.reset();
+		d.shuffle();
+		//set up hand and board cards
+	    c1=d.dealCard();
+	    c2=d.dealCard();
+	
+		hnd.addCard(d.dealCard());
+		hnd.addCard(d.dealCard());
+		hnd.addCard(d.dealCard());
+		
+		index = get_flop_index(1.0,1.0);
+		
+		System.out.println(index);
+		System.out.println(c1);
+		System.out.println(c1.getRank());
+		System.out.println(c2);
+		System.out.println(get_preflop_index(c1 , c2));
+	}
+
+	public static int get_hs_index(double v)
+	{
+		if( (v<=.2) & (v>=0))
+	        return 1;
+		else if( (v<=.3) & (v>=.2))
+	        return 2;
+		else if( (v<=.4) & (v>=.3))
+	        return 3;
+		else if( (v<=.5) & (v>=.4))
+	        return 4;
+		else if( (v<=.6) & (v>=.5))
+	        return 5;
+		else if( (v<=.7) & (v>=.6))
+	        return 6;
+		else if( (v<=.8) & (v>=.7))
+	        return 7;
+		else if( (v<=.9) & (v>=.8))
+	        return 8;
+		else if( (v<=.95) & (v>=.9))
+	        return 9;
+		else if( (v<=1) & (v>=.95))
+	        return 10;
+		else 
+			return 100;
+	}
+	
+	//returns the index the PPOT belongs in + 1
+	public static int get_pot_index(double v)
+	{
+		if( (v<=.05) & (v>=0))
+	        return 1;
+		else if( (v<=.1) & (v>=.05))
+	        return 2;
+		else if( (v<=.15) & (v>=.1))
+	        return 3;
+		else if( (v<=.2) & (v>=.15))
+	        return 4;
+		else if( (v<=.25) & (v>=.2))
+	        return 5;
+		else if( (v<=.3) & (v>=.25))
+	        return 6;
+		else if( (v<=.35) & (v>=.3))
+	        return 7;
+		else if( (v<=.4) & (v>=.35))
+	        return 8;
+		else if( (v<=.45) & (v>=.4))
+	        return 9;
+		else if( (v<=1) & (v>=.45))
+	        return 10;
+		else 
+			return 100;
+	}
+
+	public static int getRiverIndex(double v)
+	{
+		if( (v<=.05) & (v>=0))
+	        return 1;
+		else if( (v<=.1) & (v>=.05))
+	        return 2;
+		else if( (v<=.15) & (v>=.1))
+	        return 3;
+		else if( (v<=.2) & (v>=.15))
+	        return 4;
+		else if( (v<=.25) & (v>=.2))
+	        return 5;
+		else if( (v<=.3) & (v>=.25))
+	        return 6;
+		else if( (v<=.35) & (v>=.3))
+	        return 7;
+		else if( (v<=.4) & (v>=.35))
+	        return 8;
+		else if( (v<=.45) & (v>=.4))
+	        return 9;
+		else if( (v<=.5) & (v>=.45))
+	        return 10;
+		else if( (v<=.55) & (v>=.5))
+	        return 11;
+		else if( (v<=.6) & (v>=.55))
+	        return 12;
+		else if( (v<=.65) & (v>=.6))
+	        return 13;
+		else if( (v<=.7) & (v>=.65))
+	        return 14;
+		else if( (v<=.75) & (v>=.7))
+	        return 15;
+		else if( (v<=.8) & (v>=.75))
+	        return 16;
+		else if( (v<=.85) & (v>=.8))
+	        return 17;
+		else if( (v<=.9) & (v>=.85))
+	        return 18;
+		else if( (v<=.95) & (v>=.9))
+	        return 19;
+		else if( (v<=1) & (v>=.95))
+	        return 20;
+		else 
+			return 100;
+	}
+	static int get_turn_index(double hs, double pot)
+	{
+	    int hs_index = get_hs_index(hs);
+	    int pot_index = get_pot_index(pot);
+	    return(10*(hs_index-1)+pot_index);
+	}
+	static int get_flop_index(double hs, double pot)
+	{
+	    int hs_index = get_hs_index(hs);
+	    int pot_index = get_pot_index(pot);
+	    return(10*(hs_index-1)+pot_index);
+	}
+	
+	static int get_preflop_index(Card c1 , Card c2)
+	{
+	    if(c1.getSuit()==c2.getSuit())
+	    {
+	        if(c1.getRank()>c2.getRank())
+	        {
+	            return (c1.getRank()+13*c2.getRank());
+	        }
+	        return(c2.getRank()+13*c1.getRank());
+	    }
+	     if(c1.getRank()>c2.getRank())
+	     {       
+	        return (c2.getRank()+13*c1.getRank());
+	     }
+	     return(c1.getRank()+13*c2.getRank());
+	}
+}

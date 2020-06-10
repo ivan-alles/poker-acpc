@@ -1,0 +1,1 @@
+Preflop bucketing by normalized HS SD 1 (using pocket counts).

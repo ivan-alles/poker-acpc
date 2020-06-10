@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA64DA7D-0CB4-4EC8-B1B4-2E002A6412F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ai.lib.algorithms.nunit</RootNamespace>
+    <AssemblyName>ai.lib.algorithms.nunit</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\target\dist\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1607</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\target\dist\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1607</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ai.lib.utils, Version=3.0.6039.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\target\dist\bin\ai.lib.utils.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Iridium, Version=2008.8.16.470, Culture=neutral, PublicKeyToken=c061a3ec32cc0c6f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\target\dist\bin\MathNet.Iridium.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.7.10213, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\target\dist\bin\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\target\generated\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="la\VectorS_Test.cs" />
+    <Compile Include="numbers\LCM_Test.cs" />
+    <Compile Include="numbers\GCD_Test.cs" />
+    <Compile Include="opt\GoldenSectionSearch_Test.cs" />
+    <Compile Include="parallel\AssigningThreadPool_Test.cs" />
+    <Compile Include="parallel\BlockingThreadPool_Test.cs" />
+    <Compile Include="random\MersenneTwister_Test.cs" />
+    <Compile Include="random\SystemRandom_Test.cs" />
+    <Compile Include="random\TestRandom.cs" />
+    <Compile Include="sort\ExternalMergeSort_Test.cs" />
+    <Compile Include="strings\StringHashCode_Test.cs" />
+    <Compile Include="tree\CompareTrees_Test.cs" />
+    <Compile Include="tree\CompareUFTrees_Test.cs" />
+    <Compile Include="tree\FindFirstPreOrder_Test.cs" />
+    <Compile Include="ContainerExtensions_Test.cs" />
+    <Compile Include="numbers\CountBits_Test.cs" />
+    <Compile Include="random\SequenceRng_Test.cs" />
+    <Compile Include="random\DiscreteProbabilityRng_Test.cs" />
+    <Compile Include="EnumAlgos_Test.cs" />
+    <Compile Include="geometry\Test_CutAABB.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="numbers\Real01_Test.cs" />
+    <Compile Include="tree\SyncUniAndUf_Test.cs" />
+    <Compile Include="tree\TextualizeTree_Test.cs" />
+    <Compile Include="tree\CountLeaves_Test.cs" />
+    <Compile Include="tree\UFToUniAdapter_Test.cs" />
+    <Compile Include="tree\UFTree_Test.cs" />
+    <Compile Include="tree\WalkUFTreePP_Test.cs" />
+    <Compile Include="tree\WalkTreeS_Test.cs" />
+    <Compile Include="tree\WalkTreePP_Test.cs" />
+    <Compile Include="tree\XmlizeTree_Test.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\main\net\ai.lib.algorithms\ai.lib.algorithms.csproj">
+      <Project>{0A75DFAA-D654-405A-9AD7-DF5EAFC79F17}</Project>
+      <Name>ai.lib.algorithms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

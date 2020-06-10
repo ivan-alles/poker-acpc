@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bds", "bds", "{D2769115-6BD9-4B23-A025-0672DB6B182E}"
+	ProjectSection(SolutionItems) = preProject
+		src\main\assembly\assembly.xml = src\main\assembly\assembly.xml
+		src\test\resources\host-test.xml = src\test\resources\host-test.xml
+		pom.xml = pom.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.holdem.strategy.ca", "src\main\net\ai.pkr.holdem.strategy.ca\ai.pkr.holdem.strategy.ca.csproj", "{0CDD8641-F934-4F15-BAE5-236F14564DC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.holdem.strategy.ca.nunit", "src\test\net\ai.pkr.holdem.strategy.ca.nunit\ai.pkr.holdem.strategy.ca.nunit.csproj", "{C1AD5F7D-8EFA-4780-91B0-387CDA843752}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.holdem.strategy.ca.clustertree-vis", "src\main\net\ai.pkr.holdem.strategy.ca.clustertree-vis\ai.pkr.holdem.strategy.ca.clustertree-vis.csproj", "{9F2DDD26-9DDE-4039-B691-20004C1A74A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.holdem.strategy.ca.hecamcgen", "src\main\net\ai.pkr.holdem.strategy.ca.hecamcgen\ai.pkr.holdem.strategy.ca.hecamcgen.csproj", "{92A90391-0726-4448-BF6B-EC37FB3264D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ai.pkr.holdem.strategy.ca.pfkm", "src\main\net\ai.pkr.holdem.strategy.ca.pfkm\ai.pkr.holdem.strategy.ca.pfkm.csproj", "{E7427758-7571-4C8A-8CB0-22944AA970DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CDD8641-F934-4F15-BAE5-236F14564DC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CDD8641-F934-4F15-BAE5-236F14564DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CDD8641-F934-4F15-BAE5-236F14564DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CDD8641-F934-4F15-BAE5-236F14564DC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1AD5F7D-8EFA-4780-91B0-387CDA843752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1AD5F7D-8EFA-4780-91B0-387CDA843752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1AD5F7D-8EFA-4780-91B0-387CDA843752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1AD5F7D-8EFA-4780-91B0-387CDA843752}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F2DDD26-9DDE-4039-B691-20004C1A74A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F2DDD26-9DDE-4039-B691-20004C1A74A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F2DDD26-9DDE-4039-B691-20004C1A74A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F2DDD26-9DDE-4039-B691-20004C1A74A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92A90391-0726-4448-BF6B-EC37FB3264D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A90391-0726-4448-BF6B-EC37FB3264D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A90391-0726-4448-BF6B-EC37FB3264D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A90391-0726-4448-BF6B-EC37FB3264D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7427758-7571-4C8A-8CB0-22944AA970DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7427758-7571-4C8A-8CB0-22944AA970DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7427758-7571-4C8A-8CB0-22944AA970DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7427758-7571-4C8A-8CB0-22944AA970DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

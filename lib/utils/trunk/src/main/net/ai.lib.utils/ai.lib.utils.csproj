@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D990D6A3-D8DC-4DC2-A8B3-1866E3FDA539}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ai.lib.utils</RootNamespace>
+    <AssemblyName>ai.lib.utils</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\target\dist\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1607 1591</NoWarn>
+    <DocumentationFile>..\..\..\..\target\dist\Debug\ai.lib.utils.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\target\dist\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>1607 1591</NoWarn>
+    <DocumentationFile>..\..\..\..\target\dist\Release\ai.lib.utils.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\target\dist\bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\target\generated\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="ClassFactory.cs" />
+    <Compile Include="ClassFactoryParams.cs" />
+    <Compile Include="CodeBase.cs" />
+    <Compile Include="Copier.cs" />
+    <Compile Include="CustomXmlSerializable.cs" />
+    <Compile Include="ConstructFromXmlParams.cs" />
+    <Compile Include="Dbg.cs" />
+    <Compile Include="RuntimeCompile.cs" />
+    <Compile Include="HighResolutionTimer.cs" />
+    <Compile Include="Log4NetTraceListener.cs" />
+    <Compile Include="archive\PathResolver.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TableGenerator.cs" />
+    <Compile Include="Props.cs" />
+    <Compile Include="XmlSerializerExt.cs" />
+    <Compile Include="UnmanagedMemory.cs" />
+    <Compile Include="XmlDictionary.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BdsDirHelper.cs" />
+    <Compile Include="BdsVersion.cs" />
+    <Compile Include="commandline\CommandLineArguments.cs" />
+    <Compile Include="BitwiseConvert.cs" />
+    <Compile Include="Crc32.cs" />
+    <Compile Include="DataSerializationHelper.cs" />
+    <Compile Include="DirectoryExt.cs" />
+    <Compile Include="EnvironmentExt.cs" />
+    <Compile Include="Profile.cs" />
+    <Compile Include="PropString.cs" />
+    <Compile Include="SmartPtr.cs" />
+    <Compile Include="SnapshotSwitcher.cs" />
+    <Compile Include="UTHelper.cs" />
+    <Compile Include="AssemblyHelper.cs" />
+    <Content Include="todo.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ZerocIce_HomeExpanded="C:\Programme\ZeroC\Ice-3.4.1" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Props XmlMergeWithGlobal="True">
+  <p n="DeckDescriptor" v="${bds.DataDir}ai.pkr.metastrategy.2/leduc-he.deck.xml" />
+  <p n="RngSeed" v="1" />
+  <p n="ChanceAbstraction-0" v="chance-abstraction-props-0.xml" />
+  <p n="ChanceAbstraction-1" v="chance-abstraction-props-1.xml" />
+  <p n="Strategy-0" v="strategy-0.dat" />
+  <p n="Strategy-1" v="strategy-1.dat" />
+</Props>

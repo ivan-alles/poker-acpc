@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SessionSuiteCfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="ai.pkr.metabots.SessionSuiteCfg.xsd">
+    <Name>pa.mv.he.fe.2-ss</Name>
+    <LocalPlayers>
+        <LocalPlayerCfg>
+            <Name>Mvb1</Name>
+            <Type>ai.pkr.metabots.bots.ParrotBot</Type>
+            <CreationParameters>
+                <p n="Player" v="Mvb1"/>
+                <p n="ReplayFrom" v="pa.mv.he.fe.2.log"/>
+            </CreationParameters>
+        </LocalPlayerCfg>
+        <LocalPlayerCfg>
+            <Name>Mvb2</Name>
+            <Type>ai.pkr.metabots.bots.ParrotBot</Type>
+            <CreationParameters>
+                <p n="Player" v="Mvb2"/>
+                <p n="ReplayFrom" v="pa.mv.he.fe.2.log"/>
+            </CreationParameters>
+        </LocalPlayerCfg>
+    </LocalPlayers>
+    <Sessions>
+        <SessionCfg>
+            <Name>HE FL 2</Name>
+            <RngSeed>1</RngSeed>
+            <GameDefinitionFile>${bds.DataDir}ai.pkr.holdem.gamedef/holdem-gd-fl-2.xml</GameDefinitionFile>
+            <Kind>RingGame</Kind>
+            <GamesCount>1000000</GamesCount>
+            <ReplayFrom>pa.mv.he.fe.2.log</ReplayFrom>
+            <Players>
+                <PlayerSessionCfg>
+                    <Name>Mvb1</Name>
+                </PlayerSessionCfg>
+                <PlayerSessionCfg>
+                    <Name>Mvb2</Name>
+                </PlayerSessionCfg>
+            </Players>
+        </SessionCfg>
+    </Sessions>
+</SessionSuiteCfg>

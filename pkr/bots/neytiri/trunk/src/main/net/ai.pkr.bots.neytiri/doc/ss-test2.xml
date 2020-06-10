@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SessionSuiteCfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="ai.pkr.metabots.SessionSuiteCfg.xsd">
+    <Name>ney-doc2</Name>
+    <LocalPlayers>
+        <LocalPlayerCfg>
+            <Name>Neytiri</Name>
+            <Assembly>ai.pkr.bots.neytiri.dll</Assembly>
+            <Type>ai.pkr.bots.neytiri.Neytiri</Type>
+            <CreationParameters>
+                <p n="Strategy" v="neytiri-str-1.xml"/>
+                <p n="Bucketizer" v="bucketizer.xml"/>
+            </CreationParameters>
+        </LocalPlayerCfg>
+        <LocalPlayerCfg>
+            <Name>CallerBot</Name>
+            <Type>ai.pkr.metabots.bots.CallerBot</Type>
+        </LocalPlayerCfg>
+    </LocalPlayers>
+    <Sessions>
+        <SessionCfg>
+            <Name>s1</Name>
+            <RngSeed>1</RngSeed>
+            <GameDefinitionFile>gamedef.xml</GameDefinitionFile>
+            <Kind>RingGame</Kind>
+            <GamesCount>2</GamesCount>
+            <Players>
+                <PlayerSessionCfg>
+                    <Name>Neytiri</Name>
+                </PlayerSessionCfg>                
+                <PlayerSessionCfg>
+                    <Name>CallerBot</Name>
+                </PlayerSessionCfg>
+            </Players>
+        </SessionCfg>
+    </Sessions>
+</SessionSuiteCfg>

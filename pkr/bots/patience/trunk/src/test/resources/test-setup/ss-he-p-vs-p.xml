@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Plays seat-permutation sessions of Holdem for 2 instances of Patience.
+     This can be used as template to quickly create test setups for different HE strategies.
+     Configs should be adjusted. 
+-->
+<SessionSuiteCfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="ai.pkr.metabots.SessionSuiteCfg.xsd">
+    <Name>he-p-vs-p</Name>
+    <LocalPlayers>
+        <LocalPlayerCfg>
+            <Name>Patience-0</Name>
+            <Assembly>${env.BOTTEST_BOTBIN}ai.pkr.bots.patience.dll</Assembly>
+            <Type>ai.pkr.bots.patience.Patience</Type>
+            <CreationParameters XmlMergeWithGlobal = "true">
+                <p n="ConfigDir" v="${env.BOTTEST_ROOT}configs/he-3-3-3-3"/>
+            </CreationParameters>
+        </LocalPlayerCfg>
+        <LocalPlayerCfg>
+            <Name>Patience-1</Name>
+            <Assembly>${env.BOTTEST_BOTBIN}ai.pkr.bots.patience.dll</Assembly>
+            <Type>ai.pkr.bots.patience.Patience</Type>
+            <CreationParameters XmlMergeWithGlobal = "true">
+                <p n="ConfigDir" v="${env.BOTTEST_ROOT}configs/he-3-3-3-3"/>
+            </CreationParameters>
+        </LocalPlayerCfg>
+    </LocalPlayers>
+    <Sessions>
+        <SessionCfg>
+            <Name>he-p-vs-p</Name>
+            <RngSeed>0</RngSeed>
+            <GameDefinitionFile>${bds.DataDir}ai.pkr.holdem.gamedef.fl.2.1.xml</GameDefinitionFile>
+            <Kind>RingGameWithSeatPermutations</Kind>
+            <Kind>RingGame</Kind>
+            <GamesCount>1000</GamesCount>
+            <RepeatCount>100</RepeatCount>
+            <!--<ReplayFrom></ReplayFrom>-->
+            <Players>
+                <PlayerSessionCfg>
+                    <Name>Patience-0</Name>
+                </PlayerSessionCfg>
+                <PlayerSessionCfg>
+                    <Name>Patience-1</Name>
+                </PlayerSessionCfg>
+            </Players>
+        </SessionCfg>
+    </Sessions>
+</SessionSuiteCfg>

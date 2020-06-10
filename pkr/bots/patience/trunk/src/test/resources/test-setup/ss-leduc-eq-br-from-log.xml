@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SessionSuiteCfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="ai.pkr.metabots.SessionSuiteCfg.xsd">
+    <Name>LeducHE-Eq-Br-FromLog</Name>
+    <LocalPlayers>
+        <LocalPlayerCfg>
+            <Name>Patience-Eq</Name>
+            <Assembly>${env.BOTTEST_BOTBIN}ai.pkr.bots.patience.dll</Assembly>
+            <Type>ai.pkr.bots.patience.Patience</Type>
+            <CreationParameters XmlMergeWithGlobal = "true">
+                <p n="ConfigDir" v="${env.BOTTEST_ROOT}configs/leduc-eq"/>
+            </CreationParameters>
+        </LocalPlayerCfg>
+        <LocalPlayerCfg>
+            <Name>Patience-Br</Name>
+            <Assembly>${env.BOTTEST_BOTBIN}ai.pkr.bots.patience.dll</Assembly>
+            <Type>ai.pkr.bots.patience.Patience</Type>
+            <CreationParameters XmlMergeWithGlobal = "true">
+                <p n="ConfigDir" v="${env.BOTTEST_ROOT}configs/leduc-br"/>
+            </CreationParameters>
+        </LocalPlayerCfg>
+    </LocalPlayers>
+    <Sessions>
+        <SessionCfg>
+            <Name>LeducHE-Eq-Sbr</Name>
+            <RngSeed>0</RngSeed>
+            <GameDefinitionFile>${bds.DataDir}ai.pkr.metastrategy.2/leduc-he.gamedef.xml</GameDefinitionFile>
+            <!-- As we deal from enumerated log, no permutations are needed -->
+            <!-- <Kind>RingGameWithSeatPermutations</Kind>-->
+            <Kind>RingGame</Kind>
+            <GamesCount>240</GamesCount>
+            <RepeatCount>500</RepeatCount>
+            <!-- Deal from a log containing all enumerated combinations for both positions, 
+            otherwise the chance factor is too significant, at least 1M games must be played.-->
+            <ReplayFrom>${env.BOTTEST_ROOT}/data/leduc-all.log</ReplayFrom>
+            <Players>
+                <PlayerSessionCfg>
+                    <Name>Patience-Eq</Name>
+                </PlayerSessionCfg>
+                <PlayerSessionCfg>
+                    <Name>Patience-Br</Name>
+                </PlayerSessionCfg>
+            </Players>
+        </SessionCfg>
+    </Sessions>
+</SessionSuiteCfg>

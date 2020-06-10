@@ -1,0 +1,29 @@
+digraph G {
+graph [labeljust="l" labelloc="t" fontsize="28" nodesep="0.05" label="KunhPoker: chance tree." ];
+node[];
+edge[arrowhead="none" ];
+"n2"[label="Id:2\nP:2\nCp:0.16667" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n1" -> "n2"[label="1d{Q}" ];
+"n3"[label="Id:3\nP:2\nCp:0.16667" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n1" -> "n3"[label="1d{K}" ];
+"n1"[label="Id:1\nP:2\nCp:0.33333" fillcolor="#D0FFD0" style="filled, dotted" shape="ellipse" ];
+"n0" -> "n1"[label="0d{J}" ];
+"n5"[label="Id:5\nP:2\nCp:0.16667" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n4" -> "n5"[label="1d{J}" ];
+"n6"[label="Id:6\nP:2\nCp:0.16667" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n4" -> "n6"[label="1d{K}" ];
+"n4"[label="Id:4\nP:2\nCp:0.33333" fillcolor="#D0FFD0" style="filled, dotted" shape="ellipse" ];
+"n0" -> "n4"[label="0d{Q}" ];
+"n8"[label="Id:8\nP:2\nCp:0.16667" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n7" -> "n8"[label="1d{J}" ];
+"n9"[label="Id:9\nP:2\nCp:0.16667" fillcolor="#FFFFFF" style="filled" shape="box" ];
+"n7" -> "n9"[label="1d{Q}" ];
+"n7"[label="Id:7\nP:2\nCp:0.33333" fillcolor="#D0FFD0" style="filled, dotted" shape="ellipse" ];
+"n0" -> "n7"[label="0d{K}" ];
+{rank=same; round0;
+"n0"[label="Id:0\nP:2\nCp:1" fillcolor="#FFD0D0" style="filled, dotted" shape="ellipse" ];
+}
+{
+"round0"[fontsize="22" style="bold" peripheries="0" label="Round 0" ];
+}
+}

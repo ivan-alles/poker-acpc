@@ -1,0 +1,15 @@
+<assembly>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <directory>${project.build.directory}/dist/data</directory>
+            <outputDirectory>/data/ai.pkr.holdem.strategy.hs-lut</outputDirectory>
+            <includes>
+                <include>*.dat</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>

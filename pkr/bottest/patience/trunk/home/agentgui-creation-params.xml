@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Props XmlMergeWithGlobal = "true">
+   <p n="StrategyDir" v="${env.BOTTEST_ROOT}configs\champ-10"/>
+   <p n="RngSeed" v="0"/>
+</Props>

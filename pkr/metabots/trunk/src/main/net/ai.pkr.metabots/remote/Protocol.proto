@@ -1,0 +1,111 @@
+package ai.pkr.metabots.remote;
+
+//----------------------------------------------------
+// ai.lib.utils
+//----------------------------------------------------
+
+message Props
+{
+    repeated string Names = 1;
+    repeated string Values = 2;
+}
+
+//----------------------------------------------------
+// ai.pkr.metagame
+//----------------------------------------------------
+
+enum Ak
+{
+    // Use constants from ai.pkr.metagame.Ak
+    b = 0;
+    d = 1;
+    f = 2;
+    c = 3;
+    r = 4;
+}
+
+message PokerAction
+{
+    required Ak Kind = 1;
+    required sint32 Position = 2;
+    required double Amount = 3;
+    required string Cards = 4;
+}
+
+message DeckDescriptor
+{
+    required string Name = 1;
+    repeated string CardNames = 2;
+    repeated uint64 CardSets = 3;
+}
+
+enum LimitKind
+{
+    FixedLimit = 0;
+    PotLimit = 1;
+    NoLimit = 2;
+}
+
+message GameDefinition
+{
+    required string Name = 1;
+    required sint32 RoundsCount = 2;
+    required sint32 MinPlayers = 3;
+    required sint32 MaxPlayers = 4;
+    repeated double BetStructure = 5;
+    repeated double BlindStructure = 6;
+    repeated sint32 PrivateCardsCount = 7;
+    repeated sint32 PublicCardsCount = 8;
+    repeated sint32 SharedCardsCount = 9;
+    repeated sint32 BetsCountLimits = 10;
+    repeated sint32 FirstActor = 11;
+    repeated sint32 FirstActorHeadsUp = 12;
+    required LimitKind LimitKind = 13;
+    required DeckDescriptor DeckDescriptor = 14;
+}
+
+//----------------------------------------------------
+// ai.pkr.metabots
+//----------------------------------------------------
+
+message PlayerInfo
+{
+    required string Name = 1;
+}
+
+// IPlayer protocol.
+
+enum IPlayer_FunctionIDs
+{
+    // OnCreate is not used for remote bots
+    OnServerConnect  = 1;
+    OnServerDisconnect  = 2;
+    OnSessionBegin = 3;
+    OnSessionEnd = 4;
+    OnGameBegin = 5; 
+    OnGameUpdate = 6;
+    OnActionRequired = 7;
+    OnGameEnd = 8;
+};
+
+message IPlayer_OnServerDisconnect
+{
+    required string Reason = 1;
+} 
+
+
+message IPlayer_OnSessionBegin
+{ 
+    required string sessionName = 1;
+    required GameDefinition gameDef = 2;
+    required Props sessionParameters = 3;
+}
+
+// Used for all OnGame*() and OnActinRequired() methods.
+message IPlayer_GameString
+{
+    required string GameString = 1;
+}
+
+
+

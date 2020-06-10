@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Props XmlMergeWithGlobal="True">
+  <p n="TypeName" v="ai.pkr.holdem.strategy.ca.HsSdKMeansAdaptiveCa,ai.pkr.holdem.strategy.ca.1" />
+  <p n="AssemblyFileName" v="" />
+  <p n="ClusterTreeFile" v="${loc.xml.Dir}/${loc.xml.FileName}.dat" />
+  <p n="ShortDescription" v="pf-test" />
+  <p n="MinBucketCounts" v="8 10 10 4" />
+  <p n="MaxBucketCounts" v="8 10 10 4" />
+  <!-- HS bounds: r0: [0.323 0.852], r1:  [0.11 1], r2: [0.045 1], r3: [0 1] -->
+  <p n="ClusterSizes0" v="0 0.05 0.05 0.2" />
+  <p n="ClusterSizes1" v="0 2 2 2" />
+  <p n="KMeansStages" v="1000" />
+  <p n="NormalizeHandValues" v="true" />
+  <p n="SdKind" v="Sd3" />
+  <p n="PrintHands" v="false" />
+  <p n="PrintHandValues" v="false" />
+
+  <p n="Pockets7"  v="AA"/>
+  <p n="Pockets6"  v="AKs"/>
+  <p n="Pockets5"  v="AKo"/>
+  <p n="Pockets4"  v="55"/>
+  <p n="Pockets3"  v="87s"/>
+  <p n="Pockets2"  v="87o"/>
+  <p n="Pockets1"  v="72o"/>
+</Props>
+
+

@@ -1,0 +1,47 @@
+<assembly>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <!--<fileSet>
+            <directory>${project.build.directory}/dist/${ai.build.config}</directory>
+            <outputDirectory>/bin</outputDirectory>
+            <includes>
+                <include>${ai.build.target3}.dll</include>
+            </includes>
+        </fileSet>-->
+        <!--
+        <fileSet>
+            
+            <directory>${project.build.directory}/dist</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>data/ai.pkr.metabots.SessionSuiteCfg.${ai.ver.major}.xsd</include>
+                <include>doc/ai.pkr.metabots.${ai.ver.major}/examples/*.*</include>
+                <include>test/ai.pkr.metabots.${ai.ver.major}.nunit/*.*</include>
+            </includes>
+        </fileSet>
+        -->
+        <fileSet>
+            <directory>${project.build.directory}/dist/${ai.build.config}</directory>
+            <outputDirectory>/pkr/bots/neytiri/1.0</outputDirectory>
+            <includes>
+                <include>${ai.build.target1}.dll</include>
+                <include>${ai.build.target2}.exe</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+    <files>
+        <!--<file>
+            <outputDirectory>/test</outputDirectory>
+            <source>${project.build.directory}/dist/test/host-test.xml</source>
+            <destName>${project.groupId}.${project.artifactId}.${ai.ver.major}.host-test.xml</destName>
+        </file>-->
+        <file>
+            <outputDirectory>/pkr/bots/neytiri/1.0</outputDirectory>
+            <source>${project.build.directory}/dist/${ai.build.config}/ai.pkr.bots.neytiri.builder.exe.config</source>
+            <destName>ai.pkr.bots.neytiri.builder.exe.config.default</destName>
+        </file>
+    </files>
+</assembly>
