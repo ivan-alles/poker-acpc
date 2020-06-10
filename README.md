@@ -1,4 +1,4 @@
-# Poker bots for the [Annual Computer Poker Competition](http://www.computerpokercompetition.org)
+# Poker bots for the [Annual Computer Poker Competition](http://www.computerpokercompetition.org) 2011-2012
 
 The bots play fixed limit holdem heads up poker.
 
